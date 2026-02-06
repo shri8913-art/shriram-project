@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paytm Clone</title>
+
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 5%;
+    border-bottom:1px solid #ddd;
+}
+
+.dropdown-container{
+    display:flex;
+    gap:30px;
+}
+
+.dropdown-container select{
+    border:none;
+    outline:none;
+    font-weight:600;
+    background:transparent;
+    cursor:pointer;
+}
+
+.navigation-links a{
+    text-decoration:none;
+    font-weight:600;
+}
+
+.download{
+    color:#002970;
+    margin-right:20px;
+}
+
+.sign-in{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#002970;
+    color:white;
+    padding:8px 18px;
+    border-radius:999px;
+}
+
+.sign-in i{
+    background:#00BAF2;
+    padding:8px;
+    border-radius:50%;
+}
+
+/* ---------------- HERO ---------------- */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 5%;
+}
+
+.hero-text{
+    width:45%;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:25px;
+}
+
+.hero-text button{
+    background:black;
+    color:white;
+    padding:12px 22px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.hero img{
+    width:450px;
+}
+
+/* ---------------- SECTIONS ---------------- */
+.section{
+    padding:50px 5%;
+}
+
+.section h2{
+    margin-bottom:30px;
+}
+
+.cards{
+    display:flex;
+    gap:25px;
+}
+
+.card{
+    background:#00BAF2;
+    color:white;
+    width:180px;
+    padding:20px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.card i{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+/* ---------------- BOOK & BUY ---------------- */
+.book-section{
+    background:#0f4a8a;
+}
+
+.book-section .card{
+    background:#0f4a8a;
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer{
+    background:#f5f7fa;
+    padding:30px 5%;
+    text-align:center;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar-container">
+    <img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo_new.svg">
+
+    <div class="dropdown-container">
+        <select><option>Recharge & Bills</option></select>
+        <select><option>Ticket Booking</option></select>
+        <select><option>Payments & Services</option></select>
+        <select><option>Paytm for Business</option></select>
+        <select><option>Company</option></select>
+    </div>
+
+    <div class="navigation-links">
+        <a href="#" class="download"><i class="fa-solid fa-download"></i> Download App</a>
+        <a href="#" class="sign-in"><i class="fa-solid fa-user"></i> Sign In</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-text">
+        <h1>India's Most-loved Payments App</h1>
+        <p>Recharge & pay bills, book flights & movies, open a savings account, invest in stocks & mutual funds.</p>
+        <button>Download Paytm App</button>
+    </div>
+    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/850762/1640242865113.png">
+</div>
+
+<!-- RECHARGE SECTION -->
+<div class="section">
+    <h2>Recharge & Pay Bills</h2>
+    <div class="cards">
+        <div class="card"><i class="fa-solid fa-mobile"></i><p>Mobile Recharge</p></div>
+        <div class="card"><i class="fa-solid fa-lightbulb"></i><p>Electricity Bill</p></div>
+        <div class="card"><i class="fa-solid fa-tv"></i><p>DTH Recharge</p></div>
+        <div class="card"><i class="fa-solid fa-gas-pump"></i><p>Gas Bill</p></div>
+        <div class="card"><i class="fa-solid fa-credit-card"></i><p>Credit Card</p></div>
+    </div>
+</div>
+
+<!-- BOOK & BUY -->
+<div class="section book-section">
+    <h2 style="color:white;">Book & Buy</h2>
+    <div class="cards">
+        <div class="card"><i class="fa-solid fa-plane"></i><p>Flights</p></div>
+        <div class="card"><i class="fa-solid fa-train"></i><p>Trains</p></div>
+        <div class="card"><i class="fa-solid fa-bus"></i><p>Bus</p></div>
+        <div class="card"><i class="fa-solid fa-film"></i><p>Movies</p></div>
+        <div class="card"><i class="fa-solid fa-hotel"></i><p>Hotels</p></div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Paytm Clone | Built using HTML & CSS
+</footer>
+
+</body>
+</html>
