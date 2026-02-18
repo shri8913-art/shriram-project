@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app-section{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 100px;
+  background:#fff;
+  gap:60px;
+}
+
+.app-content{
+  max-width:520px;
+}
+
+.app-content h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.app-content p{
+  font-size:18px;
+  color:#555;
+  line-height:1.6;
+}
+
+.store-buttons{
+  margin-top:25px;
+  display:flex;
+  gap:15px;
+}
+
+.store-buttons img{
+  height:50px;
+  cursor:pointer;
+}
+
+.app-phones{
+   position: absolute;
+  left: calc(70% - 100px);
+  top: calc(10%);
+  width:420px;
+}
+
+.phone{
+  width:260px;
+  border-radius:30px;
+  box-shadow:0 25px 50px rgba(0,0,0,.25);
+  position:absolute;
+  transition:.4s ease;
+}
+
+.phone.back{
+  transform:rotate(-8deg);
+  left:40px;
+  top:40px;
+  opacity:.9;
+}
+
+.phone.front{
+  transform:rotate(5deg);
+  right:0;
+  top:0;
+}
+
+    </style>
+</head>
+<body>
+  <section class="app-section">
+
+  <div class="app-content">
+    <h1>Get the Official BCCI App</h1>
+
+    <p>
+      Get the latest scores on the go. Find the latest content, including match
+      highlights, press conferences and recap all at your fingertips by downloading
+      the official BCCI app.
+    </p>
+
+    <div class="store-buttons">
+     <a href="https://play.google.com/store/apps/details?id=tv.bcci&hl=en-IN" target="_blank"> <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"></a>
+      <a href="https://apps.apple.com/in/app/bcci/id1374037778" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a>
+    </div>
+  </div>
+
+  <div class="app-phones">
+    <img class="phone back" src="https://documents.bcci.tv/web-images/official-mob.png">
+    <img class="phone front" src="https://documents.bcci.tv/web-images/official-mob.png">
+  </div>
+
+</section>
+
+</body>
+</html>

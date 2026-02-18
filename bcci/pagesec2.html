@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+ .match-card{
+  background:#2c3547;
+  color:white;
+  border-radius:14px;
+  overflow:hidden;
+  max-width:700px;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.match-top{
+  background:#263043;
+  padding:14px 20px;
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  font-size:15px;
+}
+
+.timer{
+  color:#8fb5ff;
+}
+
+.teams{
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:35px 20px;
+  font-size:22px;
+  font-weight:700;
+}
+
+.vs{
+  opacity:.6;
+}
+
+.match-time{
+  text-align:center;
+  opacity:.85;
+  margin-bottom:25px;
+}
+
+.match-bottom{
+  background:#263043;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+}
+
+.info{
+  color:#8fb5ff;
+  cursor:pointer;
+}
+.team{
+    display:flex;
+    align-items:center;
+    gap:12px;   
+}
+
+.team-logo{
+  width:25px;    
+  height: 25px;   
+}
+.tickets-row{
+   display:flex;
+   gap:25px;
+}
+
+.match-card{
+   flex:1;
+}
+.matches-section{
+  padding:30px;
+}
+
+.matches-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom: 2px;
+    
+}
+
+.see-all i{
+  color: #8fb5ff;
+  font-size:50px;
+}
+
+.tickets-row{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  width: 100%;
+ }
+
+.match-card{
+  min-width:350px;
+  background:#2c3547;
+  color:white;
+  padding:30px;
+  border-radius:12px;
+  flex-shrink: 0;
+}
+.matches-header h2{
+  font-size:36px;
+  font-weight:700;
+   margin-bottom:1px;
+  padding:10px 10px;
+}
+.tickets-row{ 
+  display:none;
+ }
+
+.tickets-row.active{ 
+  display:flex; 
+}
+
+
+.tabs{
+  display:flex;
+  gap:25px;
+}
+
+.tab{
+  cursor:pointer;
+  color:#888;
+  font-size:20px;
+  position:relative;
+}
+
+.tab.active{
+  color:#1e4fd8;
+  font-weight:600;
+}
+
+.tab.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:3px;
+  background:#1e4fd8;
+}
+.match-card{
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.match-card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+.match-card{
+  position: relative;
+  overflow: hidden;
+}
+
+.match-card::before,
+.match-card::after{
+  content:"";
+  position:absolute;
+  width:30px;
+  height:30px;
+  background:#fff;   /* page background color */
+  border-radius:50%;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.match-card::before{
+  left:-15px;
+}
+
+.match-card::after{
+  right:-15px;
+}
+.match-card{
+  min-width:320px;
+  max-width:350px;
+}
+.teams{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:30px 20px;
+  font-size:20px;
+  font-weight:700;
+}
+.tickets-row{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  width:100%;
+}
+
+.tickets-row{
+  display:none;
+}
+
+.tickets-row.active{
+  display:flex;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="matches-header">
+
+  <h2>Matches</h2>
+
+  <div class="tabs">
+    <span class="tab active" onclick="showFixtures()">Fixtures</span>
+    <span class="tab" onclick="showResults()">Results</span>
+  </div>
+  
+      <a href="all.html" class="see-all"><i class="fa-solid fa-eye"></i></a>
+    
+  </div>
+
+</div>
+
+<!-- FIXTURES -->
+<div id="fixtures" class="tickets-row active">
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/CqCDnjhh7Y1729662126Australia.png" class="team-logo">
+    <span>Australia</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+</div>
+
+<!-- RESULTS -->
+<div id="results" class="tickets-row ">
+  <!-- ----------------------------------------------------------------------------- -->
+      <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 6 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/CqCDnjhh7Y1729662126Australia.png" class="team-logo">
+    <span>Australia</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 30 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 50 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+HOLLAND WON BY 45 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 100 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 100 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+</div>
+
+   <script>
+
+
+function showFixtures(){
+  switchSlider("fixtures", 0);
+}
+
+function showResults(){
+  switchSlider("results", 1);
+}
+
+function switchSlider(id, index){
+  document.querySelector(".tickets-row.active").classList.remove("active");
+  currentSlider = document.getElementById(id);
+  currentSlider.classList.add("active");
+
+  document.querySelectorAll(".tab").forEach((tab,i)=>{
+    tab.classList.toggle("active", i === index);
+  });
+}
+</script>
+
+
+</body>
+</html>

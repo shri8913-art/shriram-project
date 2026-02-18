@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .captains{
+  background:#1f2b3d;
+  color:white;
+  padding:60px 40px;
+}
+
+.cap-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.cap-tabs{
+  background:#fff;
+  border-radius:40px;
+  display:flex;
+  padding:6px;
+}
+
+.cap-tab{
+  padding:10px 22px;
+  border-radius:30px;
+  cursor:pointer;
+  color:#333;
+}
+
+.cap-tab.active{
+  background:#d14b3a;
+  color:white;
+}
+
+.cap-row{
+  display:none;
+  gap:22px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+}
+
+.cap-row.active{
+  display:flex;
+}
+
+.cap-row::-webkit-scrollbar{height:6px;}
+.cap-row::-webkit-scrollbar-thumb{
+  background:#d14b3a;
+  border-radius:10px;
+}
+
+.cap-card{
+  min-width:240px;
+  border-radius:14px;
+  overflow:hidden;
+  background:#2a3a55;
+  flex-shrink:0;
+  transition:.3s;
+}
+
+.cap-card:hover{
+  transform:translateY(-8px);
+}
+
+.cap-card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+}
+
+.cap-card p{
+  padding:12px;
+  font-weight:600;
+}
+
+    </style>
+</head>
+<body>
+    <section class="captains">
+
+  <div class="cap-header">
+    <div>
+      <h2>Captain’s Corner</h2>
+      <p>Shaping Legends, Writing Indian Cricket History</p>
+    </div>
+
+    <div class="cap-tabs">
+      <span class="cap-tab active" onclick="showCap('test',this)">Test</span>
+      <span class="cap-tab" onclick="showCap('odi',this)">ODI</span>
+      <span class="cap-tab" onclick="showCap('t20',this)">T20I</span>
+    </div>
+  </div>
+
+  <!-- TEST -->
+  <div class="cap-row active" id="test">
+        <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Rishabh_Pant.jpg/250px-Rishabh_Pant.jpg"><p>Rishab Phant (2025)</p></div>
+                <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shubman_Gill_2023_%28cropped%29.jpg/220px-Shubman_Gill_2023_%28cropped%29.jpg"><p>Shubam Ghill (2025)</p></div>
+        <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Jasprit_Bumrah_in_PMO_New_Delhi.jpg/250px-Jasprit_Bumrah_in_PMO_New_Delhi.jpg"><p>Jasprit Bumrah (2022-2025)</p></div>
+  <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg/250px-Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg"><p>Rohith Sharma (2022-2025)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg/179px-KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg"><p>KL Rahul(2022)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/250px-Virat_Kohli_in_PMO_New_Delhi.jpg"><p>Virat Kohli(2014-2022)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Mahendra_Singh_Dhoni_January_2016_%28cropped%29.jpg/242px-Mahendra_Singh_Dhoni_January_2016_%28cropped%29.jpg"><p>M.S Dhoni(2008-2015)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg/250px-Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg"><p>Virender Sehwag(2005-2012)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Rahul_Dravid_at_GQ_Men_Of_The_Year_2012_AWARD.jpg/250px-Rahul_Dravid_at_GQ_Men_Of_The_Year_2012_AWARD.jpg"><p>Rahul Dravid(2003-2007)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Sourav_Ganguly_crop.jpg/250px-Sourav_Ganguly_crop.jpg"><p>Sourav Ganguly(2000-2006)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sachin_at_Castrol_Golden_Spanner_Awards.jpg/250px-Sachin_at_Castrol_Golden_Spanner_Awards.jpg"><p>Sachin Tendulkar(1996-2000)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kapil_Dev_at_Equation_sports_auction.jpg/250px-Kapil_Dev_at_Equation_sports_auction.jpg"><p>Kapil Dev (1982-1987)</p></div>
+  </div>
+
+  <!-- ODI -->
+  <div class="cap-row" id="odi">
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shubman_Gill_2023_%28cropped%29.jpg/220px-Shubman_Gill_2023_%28cropped%29.jpg"><p>Shubam Ghill (2025)</p></div>
+ <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hardik_Pandya_in_PMO_New_Delhi.jpg/250px-Hardik_Pandya_in_PMO_New_Delhi.jpg"><p>Hardik Pandya(2023)</p></div>
+
+        <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Jasprit_Bumrah_in_PMO_New_Delhi.jpg/250px-Jasprit_Bumrah_in_PMO_New_Delhi.jpg"><p>Jasprit Bumrah (2022-2025)</p></div>
+  <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg/250px-Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg"><p>Rohith Sharma (2017-2025)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg/179px-KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg"><p>KL Rahul(2022)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/250px-Virat_Kohli_in_PMO_New_Delhi.jpg"><p>Virat Kohli(2013-2021)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gautam_Gambhir_%28IPL_2014%29.jpg/250px-Gautam_Gambhir_%28IPL_2014%29.jpg"><p>Gautam Gambhir(2010-2011)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Suresh_Raina1.jpg/250px-Suresh_Raina1.jpg"><p>Suresh Raina(2010-2014)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mahendra_Singh_Dhoni_receiving_Padma_Bhushan.jpg/250px-Mahendra_Singh_Dhoni_receiving_Padma_Bhushan.jpg"><p>M.S Dhoni(2007-2018)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg/250px-Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg"><p>Virender Sehwag(2003-2011)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Rahul_Dravid_at_GQ_Men_Of_The_Year_2012_AWARD.jpg/250px-Rahul_Dravid_at_GQ_Men_Of_The_Year_2012_AWARD.jpg"><p>Rahul Dravid(2000-2007)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sourav_Ganguly_closeup-2.jpg/167px-Sourav_Ganguly_closeup-2.jpg"><p>Sourav Ganguly(1999-2005)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sachin_at_Castrol_Golden_Spanner_Awards.jpg/250px-Sachin_at_Castrol_Golden_Spanner_Awards.jpg"><p>Sachin Tendulkar(1996-1999)</p></div>
+ 
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kapil_Dev_at_Equation_sports_auction.jpg/250px-Kapil_Dev_at_Equation_sports_auction.jpg"><p>Kapil Dev (1982-1932)</p></div>
+
+    
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Sunny_Gavaskar_Sahara.jpg/250px-Sunny_Gavaskar_Sahara.jpg"><p>Sunil Gavaskar (1980-1985)</p></div>
+  </div>
+
+  <!-- T20 -->
+  <div class="cap-row" id="t20">
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Suryakumar_Yadav_in_PMO_New_Delhi.jpg/250px-Suryakumar_Yadav_in_PMO_New_Delhi.jpg"><p>Surya Kumar Yadav (2026)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shubman_Gill_2023_%28cropped%29.jpg/220px-Shubman_Gill_2023_%28cropped%29.jpg"><p>Shubam Ghill (2025)</p></div>
+ <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hardik_Pandya_in_PMO_New_Delhi.jpg/250px-Hardik_Pandya_in_PMO_New_Delhi.jpg"><p>Hardik Pandya(2023)</p></div>
+
+        <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Jasprit_Bumrah_in_PMO_New_Delhi.jpg/250px-Jasprit_Bumrah_in_PMO_New_Delhi.jpg"><p>Jasprit Bumrah (2022-2025)</p></div>
+  <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg/250px-Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg"><p>Rohith Sharma (2017-2025)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg/179px-KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg"><p>KL Rahul(2022)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/250px-Virat_Kohli_in_PMO_New_Delhi.jpg"><p>Virat Kohli(2013-2021)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gautam_Gambhir_%28IPL_2014%29.jpg/250px-Gautam_Gambhir_%28IPL_2014%29.jpg"><p>Gautam Gambhir(2010-2011)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Suresh_Raina1.jpg/250px-Suresh_Raina1.jpg"><p>Suresh Raina(2010-2014)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mahendra_Singh_Dhoni_receiving_Padma_Bhushan.jpg/250px-Mahendra_Singh_Dhoni_receiving_Padma_Bhushan.jpg"><p>M.S Dhoni(2007-2018)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg/250px-Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg"><p>Virender Sehwag(2003-2011)</p></div>
+</div>
+
+</section>
+
+<script>
+function showCap(id, tab){
+  document.querySelectorAll('.cap-row')
+    .forEach(r => r.classList.remove('active'));
+
+  document.getElementById(id).classList.add('active');
+
+  document.querySelectorAll('.cap-tab')
+    .forEach(t => t.classList.remove('active'));
+
+  tab.classList.add('active');
+}
+</script>
+
+
+</body>
+</html>

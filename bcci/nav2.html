@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+.sub-nav{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border-bottom:1px solid #ddd;
+    padding:0 30px;
+    height:60px;
+}
+
+.gender-toggle{
+    display:flex;
+    align-items:center;
+}
+
+.gender-toggle input{
+    display:none;
+}
+
+.gender-toggle label{
+    padding:18px 32px;
+    font-weight:600;
+    cursor:pointer;
+    color:#000;
+}
+
+#men:checked + label,
+#women:checked + label{
+    background:#cf4f3f;
+    color:#fff;
+    clip-path: polygon(0 0,92% 0,100% 50%,92% 100%,0 100%);
+}
+
+.gender-toggle label + input + label{
+    margin-left:-10px;
+}
+
+.sub-menu{
+    display:flex;
+    gap:25px;
+    margin-left:30px;
+}
+
+.sub-menu span{
+    cursor:pointer;
+    padding:20px 0;
+    position:relative;
+}
+
+.sub-menu span::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#cf4f3f;
+    transition:.3s;
+}
+
+.sub-menu span:hover::after{
+    width:100%;
+}
+
+.live-btn{
+    margin-left:auto;
+    background:#cf4f3f;
+    color:#fff;
+    padding:10px 16px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sub-nav">
+
+    <div class="gender-toggle">
+        <input type="radio" name="gender" id="men" checked>
+        <label for="men">MEN</label>
+
+        <input type="radio" name="gender" id="women">
+        <label for="women">WOMEN</label>
+    </div>
+
+    <div class="sub-menu">
+        <span>News</span>
+        <span>Videos</span>
+        <span>Fixtures</span>
+        <span>Series</span>
+        <span>Archive</span>
+    </div>
+
+    <div class="live-btn">Live Domestic Matches</div>
+
+</div>
+
+</body>
+</html>

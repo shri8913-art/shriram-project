@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connected Navbar & Section</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+
+html{
+  scroll-behavior:smooth;
+}
+
+.navbar-container{
+  display:flex;
+  border:2px solid black;
+  padding:20px 5%;
+  align-items:center;
+}
+
+.dropdown-container{
+  width:60%;
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.dropdown-container a{
+  font-weight:bold;
+  color:black;
+}
+
+.navigation-links{
+  margin-left:auto;
+}
+
+.navigation-links .download{
+  color:#002970;
+  margin-right:15px;
+}
+
+.navigation-links .sign-in{
+  background:#002970;
+  color:white;
+  padding:10px;
+  border-radius:999px;
+}
+
+.navigation-links .fa-user{
+  background:#00BAF2;
+  padding:8px;
+  border-radius:50%;
+  margin-right:8px;
+}
+
+.parent{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:100px;
+}
+
+.credit-cards{
+  padding:50px;
+  height:600px;
+  width:500px;
+  border-radius:20px;
+  box-shadow:0 2px 4px #ddd;
+}
+
+#cards1{
+  background:url("https://assetscdn1.paytm.com/images/catalog/view_item/1725638720587.png") no-repeat center/cover;
+}
+
+#cards2{
+  background:linear-gradient(rgb(194,233,250),white);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ✅ NAVBAR -->
+<div class="navbar-container">
+
+<a href="#">
+<img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo_new.svg">
+</a>
+
+<div class="dropdown-container">
+  <a href="#">Recharge & Bills</a>
+  <a href="#">Ticket Booking</a>
+  <a href="#services">Payments & Services</a>
+  <a href="#">Paytm For Business</a>
+  <a href="#">Company</a>
+</div>
+
+<div class="navigation-links">
+  <a class="download" href="#"><i class="fa-solid fa-download"></i> Download App</a>
+  <a class="sign-in" href="#"><i class="fa-solid fa-user"></i> Sign In</a>
+</div>
+
+</div>
+
+<!-- ✅ CONNECTED SECTION -->
+<section id="services">
+
+<div class="parent">
+
+<div class="credit-cards" id="cards1">
+<h2>One destination for <span style="color:#00BAF2">Credit Cards</span></h2>
+<p>Paytm HDFC, SBI Card & Axis Bank Credit Card offers</p>
+</div>
+
+<div class="credit-cards" id="cards2">
+<h2>Insurance ka <span style="color:#00BAF2">Super Market</span></h2>
+<p>Explore & Purchase Insurance easily.</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ranking-section{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  gap:40px;
+  padding:60px 40px;
+  align-items:center;
+}
+
+.ranking-left h2{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.ranking-left p{
+  color:#777;
+}
+
+
+.team-ranking{
+  position:relative;
+  background:#2c57a5;
+  border-radius:20px;
+  padding:30px;
+  color:white;
+  overflow:hidden;
+}
+.team-ranking::after{
+  content:"";
+  position:absolute;
+  right:40px;
+  bottom:-20px;
+  width:260px;
+  height:260px;
+  background:url("https://documents.bcci.tv/web-images/bcci-logo.webp") no-repeat center;
+  background-size:contain;
+  opacity:0.15;          /* watermark effect */
+  pointer-events:none;
+}
+
+
+.rank-grid{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:12px;
+  margin-top:15px;
+}
+
+.rank-box{
+  background:#245fc5;
+  padding:25px;
+  border-radius:14px;
+  text-align:center;
+}
+
+.rank-box span{
+  font-size:13px;
+  opacity:.8;
+}
+
+.rank-box strong{
+  display:block;
+  font-size:42px;
+}
+
+.rank-box.big{
+  grid-column:span 2;
+}
+
+
+.player-card{
+  position:relative;
+  background:#3c4653;
+  border-radius:18px;
+  color:white;
+  padding:30px;
+  overflow:hidden;
+}
+
+.player-info span{
+  opacity:.8;
+}
+
+.player-img{
+  position:absolute;
+  right:20px;
+  bottom:0;
+  height:200px;
+}
+
+.bg-rank{
+  position:absolute;
+  right:180px;
+  top:30px;
+  font-size:140px;
+  font-weight:800;
+  opacity:.1;
+}
+
+.format-tag{
+  background:#f1c40f;
+  color:black;
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:6px;
+  margin-top:10px;
+  font-size:13px;
+  font-weight:600;
+}
+.players-row{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  padding:10px 0 20px;
+}
+
+.players-row::-webkit-scrollbar{
+  height:6px;
+}
+
+.players-row::-webkit-scrollbar-thumb{
+  background:#ccc;
+  border-radius:10px;
+}
+.player-card{
+   min-width:350px;  
+  max-width:350px; 
+  flex-shrink:0;
+  
+}
+.players-wrapper{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+
+
+    </style>
+</head>
+<body>
+<section class="ranking-section">
+
+  <div class="ranking-left">
+    <h2>The Game in Numbers</h2>
+    <p>A look at the current cricket rankings</p>
+  </div>
+
+  <div class="ranking-cards">
+
+    <div class="team-ranking">
+      <h4>Team Ranking</h4>
+
+      <div class="rank-grid">
+        <div class="rank-box">
+          <span>TEST</span>
+          <strong>#04</strong>
+        </div>
+        <div class="rank-box">
+          <span>ODI</span>
+          <strong>#01</strong>
+        </div>
+        <div class="rank-box big">
+          <span>T20I</span>
+          <strong>#01</strong>
+        </div>
+      </div>
+    </div>
+
+     <div class="players-wrapper">
+     <div class="players-row">
+      <div class="player-card">
+      <div class="player-info">
+        <h3>Virat Kohli</h3>
+        <p>Batter</p>
+        <span>Rank: #02</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/164_compress.png" class="player-img">
+      <div class="bg-rank">02</div>
+    </div>
+     
+
+     <div class="player-card">
+      <div class="player-info">
+        <h3>Rohith Sharma</h3>
+        <p>Batter</p>
+        <span>Rank: #04</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/107_compress.png" class="player-img">
+      <div class="bg-rank">04</div>
+    </div>
+
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Yashasvi Jaiswal</h3>
+        <p>Batter</p>
+        <span>Rank: #08</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/11086_compress.png" class="player-img">
+      <div class="bg-rank">08</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Shubman Gill</h3>
+        <p>Batter</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/3761_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Rishabh Pant</h3>
+        <p>Batter</p>
+        <span>Rank: #15</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/2972_compress.png" class="player-img">
+      <div class="bg-rank">15</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Ravindra Jadeja</h3>
+        <p>All Rounder</p>
+        <span>Rank: #23</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/9_compress.png" class="player-img">
+      <div class="bg-rank">23</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>KL Rahul</h3>
+        <p>Batter</p>
+        <span>Rank: #35</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/1125_compress.png" class="player-img">
+      <div class="bg-rank">35</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Shreyas Iyer</h3>
+        <p>Batter</p>
+        <span>Rank: #12</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/1563_compress.png" class="player-img">
+      <div class="bg-rank">12</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Abhishek Sharma</h3>
+        <p>Batter</p>
+        <span>Rank: #01</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/playerheadshot/bcci/1000*1280/11099.png" class="player-img">
+      <div class="bg-rank">01</div>
+    </div>
+     
+      <div class="player-card">
+      <div class="player-info">
+        <h3>Jasprit Bumrah</h3>
+        <p>Bowler</p>
+        <span>Rank: #01</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/1124_compress.png" class="player-img">
+      <div class="bg-rank">01</div>
+    </div>
+
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Siraj</h3>
+        <p>Bowler</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/3840_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+
+    
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Kuldeep Yadav</h3>
+        <p>Bowler</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/261_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+
+</body>
+</html>

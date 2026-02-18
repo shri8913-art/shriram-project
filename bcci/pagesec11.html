@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mega-footer{
+  background:radial-gradient(circle at top left,#0b2344,#06162d);
+  padding:70px 60px;
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+/* subtle wave pattern */
+.mega-footer::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+   repeating-linear-gradient(
+     -20deg,
+     rgba(255,255,255,.03),
+     rgba(255,255,255,.03) 1px,
+     transparent 1px,
+     transparent 40px
+   );
+  pointer-events:none;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.6fr repeat(6,1fr);
+  gap:60px;
+  position:relative;
+  z-index:1;
+}
+
+.footer-col h4{
+  font-size:20px;
+  margin-bottom:18px;
+}
+
+.footer-col a{
+  display:block;
+  color:#cbd6e3;
+  text-decoration:none;
+  margin-bottom:10px;
+  font-size:15px;
+}
+
+.footer-col a:hover{
+  color:white;
+}
+
+.logo-col img{
+  width:90px;
+  margin-bottom:20px;
+}
+
+.logo-col p{
+  font-size:14px;
+  color:#cbd6e3;
+  margin:6px 0;
+}
+
+    </style>
+</head>
+<body>
+    <section class="mega-footer">
+
+  <div class="footer-grid">
+
+    <div class="footer-col logo-col">
+      <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png">
+      <h4>Contact Us</h4>
+      <p>4th Floor, Cricket Centre</p>
+      <p>Wankhede Stadium ‘D’ Road,</p>
+      <p>Churchgate Mumbai – 400020, India.</p>
+      <p>Email: office@bcci.tv</p>
+      <p>T: +91 22 67598800</p>
+      <p>T: +91 22 61580300</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Matches</h4>
+      <a>Domestic</a>
+      <a>International</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Videos</h4>
+      <a>Latest</a>
+      <a>Highlights</a>
+      <a>Features & Interviews</a>
+      <a>Press Conferences</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>News</h4>
+      <a>Latest</a>
+      <a>Press Releases</a>
+      <a>Features & Interviews</a>
+      <a>BCCI News</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>More</h4>
+      <a>IPL</a>
+      <a>WPL</a>
+      <a>Venues</a>
+      <a>Galleries</a>
+      <a>Jobs</a>
+      <a>Tender</a>
+      <a>Playing Conditions</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>About</h4>
+      <a>History</a>
+      <a>Anti Corruption</a>
+      <a>Anti Racism</a>
+      <a>Anti Doping</a>
+      <a>TUE Application Form</a>
+      <a>Annual Reports</a>
+      <a>MCC Laws of Cricket</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Players</h4>
+      <a>Men</a>
+      <a>Women</a>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>

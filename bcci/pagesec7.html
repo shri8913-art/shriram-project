@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .honours{
+  background:#273042;
+  padding:60px 40px;
+  color:white;
+}
+
+.honours h2{
+  font-size:38px;
+  margin-bottom:30px;
+}
+
+.honours-row{
+  display:flex;
+  gap:30px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  padding-bottom:20px;
+}
+
+.honours-row::-webkit-scrollbar{
+  height:6px;
+}
+
+.honours-row::-webkit-scrollbar-thumb{
+  background:#d34a3a;
+  border-radius:10px;
+}
+
+.honour-card{
+  min-width:260px;
+  background:#2f4270;
+  border-radius:14px;
+  padding:25px;
+  text-align:center;
+  position:relative;
+  flex-shrink:0;
+}
+
+.honour-card img{
+  height:140px;
+  margin:30px 0 15px;
+  z-index:2;
+  position:relative;
+}
+
+.honour-card p{
+  font-size:18px;
+  font-weight:600;
+    transition:.3s ease;
+
+}
+
+.honour-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 12px 30px rgba(0,0,0,.4);
+}
+
+.year{
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:90px;
+  font-weight:800;
+  opacity:.12;
+  pointer-events:none;
+}
+
+    </style>
+</head>
+<body>
+    <section class="honours">
+
+  <h2>Honours</h2>
+
+  <div class="honours-row">
+
+    <div class="honour-card">
+      <span class="year">1983</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/1983.png">
+      <p>ICC World Cup</p>
+    </div>
+
+    <div class="honour-card">
+      <span class="year">2000</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+    <div class="honour-card">
+      <span class="year">2007</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/2007.png">
+      <p>ICC T20 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2008</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2011</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/2011.png">
+      <p>ICC Cricket World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2012</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2013</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/2013.png">
+      <p>ICC Champions Trophy</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2018</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2022</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2025</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/2013.png">
+      <p>ICC Champions Trophy</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2026</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+
+  </div>
+
+</section>
+
+    
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+.videos-section{
+  background:#243045;
+  padding:40px 30px;
+  color:white;
+}
+
+.videos-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:25px;
+}
+
+.video-tabs{
+  display:flex;
+    position:relative;
+  gap:30px;
+
+}
+
+   
+.vtab{
+   position:relative;
+  cursor:pointer;
+  padding-bottom:6px;
+  cursor:pointer;
+  opacity:.7;
+  position:relative;
+}
+
+.vtab.active{
+  opacity:1;
+}
+
+.vtab::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:3px;
+  background:#ff2a2a;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+}
+.vtab.active::after{
+    transform:scaleX(1);
+
+  content:"";
+  position:absolute;
+  width:100%;
+  height:3px;
+  background:red;
+  left:0;
+  bottom:-8px;
+}
+
+.videos-row{
+  display:none;
+  gap:25px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+    animation:fade .35s ease;
+
+}
+
+.videos-row.active{
+  display:flex;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.video-card{
+  min-width:280px;
+  background:#173c6d;
+  border-radius:14px;
+  overflow:hidden;
+  flex-shrink:0;
+}
+
+.thumb{
+  position:relative;
+  height:170px;
+}
+
+.thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.play{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:white;
+  color:black;
+  border-radius:50%;
+  padding:14px 18px;
+  font-size:18px;
+}
+
+.video-info{
+  padding:15px;
+}
+
+.date{
+  opacity:.7;
+  font-size:13px;
+}
+
+.video-info h4{
+  margin:8px 0;
+  font-size:16px;
+}
+
+.meta{
+  font-size:13px;
+  opacity:.8;
+}
+
+    </style>
+</head>
+<body>
+<section class="videos-section">
+
+  <div class="videos-header">
+    <h2>Videos</h2>
+
+    <div class="video-tabs">
+  <span class="vtab active" onclick="showVideos('latest', this)">Latest</span>
+  <span class="vtab" onclick="showVideos('highlights', this)">Highlights</span>
+  <span class="vtab" onclick="showVideos('features', this)">Features & Interviews</span>
+  <span class="vtab" onclick="showVideos('press', this)">Press Conferences</span>
+</div>
+
+
+    <div class="video-controls">
+     
+    </div>
+  </div>
+
+
+    <div class="videos-row active" id="latest">
+<iframe width="331" height="599" src="https://www.youtube.com/embed/fQzZtqcVoTg" title="Champions India and those who walked before | CWC25" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/hAn1HY4_b9w" title="Smriti Mandhana ko mila “Star Opener” ka khitab |  #SmritiMandhana #StarOpener #WomenCricket" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/0vm8sxKcfAI" title="Smriti Mandhana named BBC Indian Sportswoman of the Year | BBC News India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/2_1Qwa4wYlk" title="Sania Mirza meets the DC girls 😍" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+
+<div class="videos-row" id="highlights">
+ <iframe width="337" height="599" src="https://www.youtube.com/embed/N7rBL8R4QZk" title="|| Radha Yadav Stuns Everyone with Her Brilliant Fielding || Game-Changing Fielding by Radha Yadav" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ <iframe width="337" height="599" src="https://www.youtube.com/embed/_M-BjKWbmzs" title="A flying Jemimah Rodrigues takes a blinder 🚨🤩 #CWC25" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/w1kJ0rewE90" title="Just Jemimah Rodrigues jamming on DJ&#39;s Stadium Music ❤ #ytshorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/ru8Js3Qa8wY" title="Women&#39;s Cricket Roars! India Reaches World Cup Final!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="videos-row" id="features">
+  <iframe width="337" height="599" src="https://www.youtube.com/embed/_BtPtcAvsis" title="Smriti Mandhana roasts Jemimah Rodrigues 😂#WPL2024 #ytshorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="337" height="599" src="https://www.youtube.com/embed/xXzAy-NT5rQ" title="Smriti Mandhana — fun and fabulous in our rapid fire round! 😍" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/ScX8D6rCFRo" title="Raise Your Hands If | Mithali Raj, Smriti Mandhana | India Women Vs New Zealand Women Live Cricket" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/0JmGQjdrMmU" title="Absolute gold from Smriti Mandhana!⚡ Throwback to #ISH2019 🏆" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="videos-row" id="press">
+<iframe width="337" height="599" src="https://www.youtube.com/embed/lUkYK_9kNCs" title="#ICCT20 women’s #Cricket World Cup , Pakistani captain Fatima Sana , Press conference in #Dubai ." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/T5VcVDLuAoA" title="The moment India completed a comprehensive win over Pakistan at #CWC25 👏" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/OMxF9w8jm_0" title="All Captains Are Ready For The @ICC WOMENS CRICKET WORLD CUP 2025 #cricketlover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/pCDexXWwLck" title="Smriti Mandhana didn’t believe at first after winning the World Cup #bcci #smriti mandhana #cwc25" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+</section>
+
+
+
+
+<script>
+function showVideos(id, tab){
+  document.querySelectorAll(".videos-row")
+    .forEach(row => row.classList.remove("active"));
+
+  document.getElementById(id).classList.add("active");
+
+  document.querySelectorAll(".vtab")
+    .forEach(t => t.classList.remove("active"));
+
+  tab.classList.add("active");
+}
+</script>
+
+
+
+
+
+</body>
+</html>

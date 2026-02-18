@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:'Montserrat', sans-serif;
+}
+
+.top-nav{
+    background:#0c235a;
+    display:flex;
+    align-items:center;
+    padding:12px 40px;
+    color:white;
+}
+
+.logo{
+    height:40px;
+    margin-right:35px;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+    font-size:18px;
+}
+
+.menu span{
+    font-weight:600;
+}
+
+.right{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+}
+
+.right-item{
+    display:flex;
+    align-items:center;
+    padding:0 12px;
+    height:28px;
+    border-left:1px solid rgba(255,255,255,.25);
+}
+
+.right img{
+    height:18px;
+}
+
+.hamburger{
+    height:14px;
+    cursor:pointer;
+}
+
+#searchToggle{
+    display:none;
+}
+
+.search-box{
+    display:none;
+    background:#fff;
+    padding:15px 40px;
+    gap:10px;
+    align-items:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+#searchToggle:checked ~ .search-box{
+    display:flex;
+}
+
+.search-box input{
+    flex:1;
+    padding:10px 15px;
+    border-radius:20px;
+    border:1px solid #ccc;
+}
+
+.search-box select{
+    padding:10px;
+    border-radius:20px;
+    border:1px solid #ccc;
+}
+
+.search-box button{
+    background:#d3543c;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.lang{
+    position:relative;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.lang-menu{
+    display:none;
+    position:absolute;
+    top:35px;
+    right:0;
+    background:white;
+    color:black;
+    min-width:80px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+#langToggle:checked + .lang .lang-menu{
+    display:block;
+}
+
+
+.lang-menu div{
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+.lang-menu div:hover{
+    background:#eee;
+}
+
+#menuToggle{
+    display:none;
+}
+
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(#020814,#0a1326);
+    color:white;
+    padding:50px;
+    transform:translateX(100%);
+    transition:.4s ease;
+    z-index:9999;
+}
+
+#menuToggle:checked ~ .menu-overlay{
+    transform:translateX(0);
+}
+
+.close-btn{
+    position:absolute;
+    top:25px;
+    right:30px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.menu-list div{
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    font-size:20px;
+    cursor:pointer;
+}
+
+.menu-list div:hover{
+    color:#ffcc66;
+}
+.top-menu{
+    position:relative;
+    display:flex;
+    gap:35px;
+    font-size:18px;
+    font-weight:600;
+}
+
+.top-menu input{
+    display:none;
+}
+
+.top-menu label{
+    cursor:pointer;
+    padding:10px 0;
+    color:white;
+}
+
+.top-line{
+    position:absolute;
+    bottom:-8px;
+    left:0;
+    height:3px;
+    width:110px;
+    background:#e2573f;
+    transition:.3s ease;
+}
+
+#intl:checked ~ .top-line{
+    left:0;
+    width:110px;
+}
+
+#dom:checked ~ .top-line{
+    left:145px;
+    width:95px;
+}
+
+</style>
+</head>
+
+<body>
+
+<input type="checkbox" id="searchToggle">
+
+<input type="checkbox" id="menuToggle">
+
+<div class="top-nav">
+
+    <img class="logo" src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png">
+
+    <div class="top-menu">
+
+    <input type="radio" name="mode" id="intl" checked>
+    <label for="intl" id="International">International</label>
+
+    <input type="radio" name="mode" id="dom">
+    <label for="dom" id="Domestic">Domestic</label>
+
+    <div class="top-line"></div>
+</div>
+
+
+    <div class="right">
+
+        <div class="right-item">
+            <label for="searchToggle">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+        </div>
+
+        <div class="right-item">
+            <a href="https://www.iplt20.com/" target="_blank">
+                <img src="https://documents.bcci.tv/web-images/ipl-logo.webp">
+            </a>
+        </div>
+
+        <div class="right-item">
+            <a href="https://www.wplt20.com/" target="_blank">
+                <img src="https://documents.bcci.tv/web-images/wpl-logo.webp">
+            </a>
+        </div>
+
+        <div class="right-item">
+            <label for="menuToggle">
+                <img class="hamburger" src="https://documents.bcci.tv/web-images/hamburger-menu.png">
+            </label>
+        </div>
+
+        <input type="checkbox" id="langToggle" hidden>
+
+<div class="right-item lang">
+
+    <label for="langToggle">EN ▼</label>
+
+    <div class="lang-menu">
+        <div onclick="setLang('en')">EN</div>
+        <div onclick="setLang('hi')">HI</div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+<div class="search-box">
+    <input type="text" placeholder="Search">
+    <select>
+        <option>All</option>
+        <option>News</option>
+        <option>Videos</option>
+    </select>
+    <button>Search</button>
+</div>
+
+<div class="menu-overlay">
+    <label for="menuToggle" class="close-btn">✖</label>
+    <div class="menu-list">
+        <div>About</div>
+        <div>Apex Council Members</div>
+        <div>Documents</div>
+        <div>Tenders</div>
+        <div>Jobs</div>
+        <div>Integrity Initiatives</div>
+        <div>Photo Gallery</div>
+        <div>Venues</div>
+        <div>Mobile Products</div>
+    </div>
+</div>
+
+<script>
+function setLang(lang){
+    if(lang === 'hi'){
+        document.getElementById("International").innerText = "अंतरराष्ट्रीय";
+        document.getElementById("Domestic").innerText = "घरेलू";
+    } else {
+        document.getElementById("International").innerText = "International";
+        document.getElementById("Domestic").innerText = "Domestic";
+    }
+}
+</script>
+
+</body>
+</html>

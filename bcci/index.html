@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="bcc1.css">
+</head>
+<body>
+    <header>
+        
+<input type="checkbox" id="searchToggle">
+
+<input type="checkbox" id="menuToggle">
+
+<div class="top-nav">
+
+    <img class="logo" src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png">
+
+    <div class="top-menu">
+
+    <input type="radio" name="mode" id="intl" checked>
+    <label for="intl" id="International">International</label>
+
+    <input type="radio" name="mode" id="dom">
+    <label for="dom" id="Domestic">Domestic</label>
+
+    <div class="top-line"></div>
+</div>
+
+
+    <div class="right">
+
+        <div class="right-item">
+            <label for="searchToggle">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+        </div>
+
+        <div class="right-item">
+            <a href="https://www.iplt20.com/" target="_blank">
+                <img src="https://documents.bcci.tv/web-images/ipl-logo.webp">
+            </a>
+        </div>
+
+        <div class="right-item">
+            <a href="https://www.wplt20.com/" target="_blank">
+                <img src="https://documents.bcci.tv/web-images/wpl-logo.webp">
+            </a>
+        </div>
+
+        <div class="right-item">
+            <label for="menuToggle">
+                <img class="hamburger" src="https://documents.bcci.tv/web-images/hamburger-menu.png">
+            </label>
+        </div>
+
+        <input type="checkbox" id="langToggle" hidden>
+
+<div class="right-item lang">
+
+    <label for="langToggle">EN ▼</label>
+
+    <div class="lang-menu">
+        <div onclick="setLang('en')">EN</div>
+        <div onclick="setLang('tel')">TEL</div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+<div class="search-box">
+    <input type="text" placeholder="Search">
+    <select>
+        <option>All</option>
+        <option>News</option>
+        <option>Videos</option>
+    </select>
+    <button>Search</button>
+</div>
+
+<div class="menu-overlay">
+    <label for="menuToggle" class="close-btn">✖</label>
+    <div class="menu-list">
+        <div>About</div>
+        <div>Apex Council Members</div>
+        <div>Documents</div>
+        <div>Tenders</div>
+        <div>Jobs</div>
+        <div>Integrity Initiatives</div>
+        <div>Photo Gallery</div>
+        <div>Venues</div>
+        <div>Mobile Products</div>
+    </div>
+</div>
+
+    <div class="sub-nav">
+
+    <div class="gender-toggle">
+        <input type="radio" name="gender" id="men" checked>
+        <label for="men" id="menText">MEN</label>
+
+        <input type="radio" name="gender" id="women">
+        <label for="women" id="womenText">WOMEN</label>
+    </div>
+
+    <div class="sub-menu">
+        <span id="news">News</span>
+        <span id="videos">Videos</span>
+        <span id="fix">Fixtures and Results</span>
+        <span id="series">Series and Tournament</span>
+        <span id="archive">Archive</span>
+        <span id="players">Players</span>
+        <span id="Ranking">Ranking</span>
+        <span id="Stats">Stats</span>
+    </div>
+
+    <div class="live-btn" id="LiveText">Live Domestic Matches</div>
+
+</div>
+    </header>
+    <main>
+
+
+<div id="menContent" class="gender-content active">
+      
+        <div class="container-fluid my-4 px-0">
+
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-inner rounded-4 overflow-hidden">
+
+<div class="carousel-item active">
+  <div class="hero-slide">
+
+    <iframe 
+      src="https://www.youtube.com/embed/8gRY4YjqoVc"
+      allowfullscreen>
+    </iframe>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h2>RCB winning moment e sala cup namde</h2>
+      <p>17th Feb, 2026</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="carousel-item">
+  <div class="hero-slide">
+
+    <iframe 
+      src="https://www.youtube.com/embed/nGteKMz9_o4"
+      allowfullscreen>
+    </iframe>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h2>When thala enters the ground</h2>
+      <p>20th Feb, 2026</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="carousel-item">
+  <div class="hero-slide">
+
+    <iframe 
+      src="https://www.youtube.com/embed/oyV74sKKHCI"
+      allowfullscreen>
+    </iframe>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h2>Breaking Boundaries: Rohit Sharma 264</h2>
+      <p>25th Feb, 2026</p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+</div>
+
+<div class="matches-wrapper">
+
+
+    <div class="matches-header">
+
+  <h2>Matches</h2>
+
+  <div class="tabs">
+    <span class="tab active" onclick="showFixtures()">Fixtures</span>
+    <span class="tab" onclick="showResults()">Results</span>
+  </div>
+  <div class="controls">
+      <a href="all.html" class="see-all"><i class="fa-solid fa-eye"></i></a>
+    </div>
+  </div>
+
+</div>
+
+<!-- FIXTURES -->
+<div id="fixtures" class="tickets-row active">
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/CqCDnjhh7Y1729662126Australia.png" class="team-logo">
+    <span>Australia</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC MEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+</div>
+
+<!-- RESULTS -->
+<div id="results" class="tickets-row ">
+  <!-- ----------------------------------------------------------------------------- -->
+      <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 6 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/CqCDnjhh7Y1729662126Australia.png" class="team-logo">
+    <span>Australia</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 30 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 50 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+HOLLAND WON BY 45 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 100 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 100 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+</div>
+
+<!-- ---------------------------------------------------------------------------------->
+ <section class="videos-section">
+
+  <div class="videos-header">
+    <h2>Videos</h2>
+
+    <div class="video-tabs">
+  <span class="vtab active" onclick="showVideos('latest', this)">Latest</span>
+  <span class="vtab" onclick="showVideos('highlights', this)">Highlights</span>
+  <span class="vtab" onclick="showVideos('features', this)">Features & Interviews</span>
+  <span class="vtab" onclick="showVideos('press', this)">Press Conferences</span>
+</div>
+
+
+    <div class="video-controls">
+     
+    </div>
+  </div>
+
+
+    <div class="videos-row active" id="latest">
+<iframe width="951" height="535" src="https://www.youtube.com/embed/zyg6rWVAv94" title="Pak Media crying on Bumrah, Pandya bowling PAK poor batting today vs IND | Ramiz Raja, Shoaib Akhtar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/MAm0RLQpYas" title="Final | India vs Pakistan | DP World Asia Cup 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+<iframe width="951" height="535" src="https://www.youtube.com/embed/rBlkS8elxCQ" title="T20 World Cup News | Pakistan Cricket Board Meets ICC In Lahore As WC Boycott Standoff Deepens" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+<iframe width="951" height="535" src="https://www.youtube.com/embed/OwEcgkZVPto" title="ICC Breaks Silence On Pakistan Boycotting T20 World Cup 2026 Game Against India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="videos-row" id="highlights">
+  <iframe width="951" height="535" src="https://www.youtube.com/embed/ftloBY-lEVs" title="Scotland v Nepal | Match Highlights | Men&#39;s T20 World Cup 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/-xlKTqivNlA" title="भारत की सुपर 8 में जगह पक्की | Hindi Highlights | PAK vs IND | Men’s T20 World Cup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/2HMuJbexIow" title="Sri Lanka v Australia | Match Highlights | Men&#39;s T20 World Cup 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/qERhx6N5yIc" title="New Zealand v Canada | Match Highlights | Men&#39;s T20 World Cup 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+</div>
+
+<div class="videos-row" id="features">
+  <iframe width="951" height="535" src="https://www.youtube.com/embed/9GBydDR4D2k" title="Rohit Sharma &amp; Shreyas Iyer REVEAL These Secrets About Their Teammates | Episode 2 | #TGIKS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/Jqo1BM0TfBY" title="Mindset of a Champion ft. Virat Kohli | RCB Podcast: Bold and Beyond | IPL 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/2xzIc-sY-cA" title="Virat Kohli on Athlete Mindset, Leadership Pressure &amp; Delhi Days" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/JiPdICBOSNQ" title="From Film Sets to Cricket Nets - The Varun Chakravarthy Story | Kutti Stories with Ash | S3 E3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+</div>
+
+<div class="videos-row" id="press">
+<iframe width="951" height="535" src="https://www.youtube.com/embed/xp0xDYEBI-0" title="Axar Patel Press Conference Today | India vs Pakistan T20 World Cup 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/m-li89wmNeA" title="Asia Cup press conference: Suryakumar Yadav on playing Pakistan, Sanju Samson, India Playing XI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/8PZ2RBpIYW8" title="Top 10 Most Funny Press Conferences | Virat Kohli | Rohit Sharma | Team India World Cup | IND vs PAK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="951" height="535" src="https://www.youtube.com/embed/2zskkKw-dI8" title="Suryakumar Yadav press conference: Shreyas Iyer latest update, on his poor form with bat and more" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+</section>
+<!-- ---------------------------------------------------- -->
+ <section class="news-section">
+
+  <div class="news-header">
+    <h2>Latest News</h2>
+    
+  </div>
+
+  <div class="news-layout">
+    <div class="featured-news">
+      <img src="https://assets.bcci.tv/bcci/articles/1770537973_BCCI_Thumbnail.png">
+
+      <div class="featured-overlay">
+        <span class="badge">News</span>
+        <h3>BCCI invites applications for Coaching and Performance Staff positions at the Centre of Excellence</h3>
+        <p>09th February, 2026</p>
+      </div>
+    </div>
+    <div class="side-news">
+
+      <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1770639560_BCCI_Thumbnail.png">
+        <div>
+          <span>09th February, 2026</span>
+          <h4>BCCI announces Annual Player Retainership 2025–26 – Team India</h4>
+        </div>
+      </div>
+       <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1770395018_2260248429.jpg">
+        <div>
+          <span>09th February, 2026</span>
+          <h4>BCCI announces Annual Player Retainership 2025–26 – Team India</h4>
+        </div>
+      </div>
+       <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1770124587_GettyImages-2158599902.jpg.jpeg">
+        <div>
+          <span>09th February, 2026</span>
+          <h4>BCCI announces Annual Player Retainership 2025–26 – Team India</h4>
+        </div>
+      </div>
+       <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1769349386_Website_Thumbnail.png">
+        <div>
+          <span>09th February, 2026</span>
+          <h4>BCCI announces Annual Player Retainership 2025–26 – Team India</h4>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1769408229_8338f950-ff14-429a-8340-6f72aeb7401c-monochrome.png">
+        <div>
+          <span>06th February, 2026</span>
+          <h4>BCCI congratulates India Under-19 team on ICC World Cup triumph</h4>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1768575108_Website_Thumbnail.png">
+        <div>
+          <span>06th February, 2026</span>
+          <h4>Harshit Rana ruled out, Siraj named replacement</h4>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="ranking-section">
+
+  <div class="ranking-left">
+    <h2>The Game in Numbers</h2>
+    <p>A look at the current cricket rankings</p>
+  </div>
+
+  <div class="ranking-cards">
+
+    <div class="team-ranking">
+      <h4>Team Ranking</h4>
+
+      <div class="rank-grid">
+        <div class="rank-box">
+          <span>TEST</span>
+          <strong>#04</strong>
+        </div>
+        <div class="rank-box">
+          <span>ODI</span>
+          <strong>#01</strong>
+        </div>
+        <div class="rank-box big">
+          <span>T20I</span>
+          <strong>#01</strong>
+        </div>
+      </div>
+    </div>
+
+     <div class="players-wrapper">
+     <div class="players-row">
+      <div class="player-card">
+      <div class="player-info">
+        <h3>Virat Kohli</h3>
+        <p>Batter</p>
+        <span>Rank: #02</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/164_compress.png" class="player-img">
+      <div class="bg-rank">02</div>
+    </div>
+     
+
+     <div class="player-card">
+      <div class="player-info">
+        <h3>Rohith Sharma</h3>
+        <p>Batter</p>
+        <span>Rank: #04</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/107_compress.png" class="player-img">
+      <div class="bg-rank">04</div>
+    </div>
+
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Yashasvi Jaiswal</h3>
+        <p>Batter</p>
+        <span>Rank: #08</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/11086_compress.png" class="player-img">
+      <div class="bg-rank">08</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Shubman Gill</h3>
+        <p>Batter</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/3761_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Rishabh Pant</h3>
+        <p>Batter</p>
+        <span>Rank: #15</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/2972_compress.png" class="player-img">
+      <div class="bg-rank">15</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Ravindra Jadeja</h3>
+        <p>All Rounder</p>
+        <span>Rank: #23</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/9_compress.png" class="player-img">
+      <div class="bg-rank">23</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>KL Rahul</h3>
+        <p>Batter</p>
+        <span>Rank: #35</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/1125_compress.png" class="player-img">
+      <div class="bg-rank">35</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Shreyas Iyer</h3>
+        <p>Batter</p>
+        <span>Rank: #12</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/1563_compress.png" class="player-img">
+      <div class="bg-rank">12</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Abhishek Sharma</h3>
+        <p>Batter</p>
+        <span>Rank: #01</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/playerheadshot/bcci/1000*1280/11099.png" class="player-img">
+      <div class="bg-rank">01</div>
+    </div>
+     
+      <div class="player-card">
+      <div class="player-info">
+        <h3>Jasprit Bumrah</h3>
+        <p>Bowler</p>
+        <span>Rank: #01</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/1124_compress.png" class="player-img">
+      <div class="bg-rank">01</div>
+    </div>
+
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Siraj</h3>
+        <p>Bowler</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/3840_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+
+    
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Kuldeep Yadav</h3>
+        <p>Bowler</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/261_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+<!-- ---------------------------------------------------------------------- -->
+ <section class="app-section">
+
+  <div class="app-content">
+    <h1>Get the Official BCCI App</h1>
+
+    <p>
+      Get the latest scores on the go. Find the latest content, including match
+      highlights, press conferences and recap all at your fingertips by downloading
+      the official BCCI app.
+    </p>
+
+    <div class="store-buttons">
+     <a href="https://play.google.com/store/apps/details?id=tv.bcci&hl=en-IN" target="_blank"> <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"></a>
+      <a href="https://apps.apple.com/in/app/bcci/id1374037778" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a>
+    </div>
+  </div>
+
+  <div class="app-phones">
+    <img class="phone back" src="https://documents.bcci.tv/web-images/official-mob.png">
+    <img class="phone front" src="https://documents.bcci.tv/web-images/official-mob.png">
+  </div>
+
+</section>
+<!-- ------------------------- -->
+   <section class="honours">
+
+  <h2>Honours</h2>
+
+  <div class="honours-row">
+
+    <div class="honour-card">
+      <span class="year">1983</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/1983.png">
+      <p>ICC World Cup</p>
+    </div>
+
+    <div class="honour-card">
+      <span class="year">2000</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+    <div class="honour-card">
+      <span class="year">2007</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/2007.png">
+      <p>ICC T20 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2008</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2011</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/2011.png">
+      <p>ICC Cricket World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2012</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2013</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/2013.png">
+      <p>ICC Champions Trophy</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2018</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2022</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2025</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/2013.png">
+      <p>ICC Champions Trophy</p>
+    </div>
+
+     <div class="honour-card">
+      <span class="year">2026</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/Under_19.png">
+      <p>ICC Under-19 World Cup</p>
+    </div>
+
+
+  </div>
+
+</section>
+<!-- ------------------------------- -->
+     <section class="captains">
+
+  <div class="cap-header">
+    <div>
+      <h2>Captain’s Corner</h2>
+      <p>Shaping Legends, Writing Indian Cricket History</p>
+    </div>
+
+    <div class="cap-tabs">
+      <span class="cap-tab active" onclick="showCap('test',this)">Test</span>
+      <span class="cap-tab" onclick="showCap('odi',this)">ODI</span>
+      <span class="cap-tab" onclick="showCap('t20',this)">T20I</span>
+    </div>
+  </div>
+
+  <!-- TEST -->
+  <div class="cap-row active" id="test">
+        <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Rishabh_Pant.jpg/250px-Rishabh_Pant.jpg"><p>Rishab Phant (2025)</p></div>
+                <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shubman_Gill_2023_%28cropped%29.jpg/220px-Shubman_Gill_2023_%28cropped%29.jpg"><p>Shubam Ghill (2025)</p></div>
+        <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Jasprit_Bumrah_in_PMO_New_Delhi.jpg/250px-Jasprit_Bumrah_in_PMO_New_Delhi.jpg"><p>Jasprit Bumrah (2022-2025)</p></div>
+  <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg/250px-Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg"><p>Rohith Sharma (2022-2025)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg/179px-KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg"><p>KL Rahul(2022)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/250px-Virat_Kohli_in_PMO_New_Delhi.jpg"><p>Virat Kohli(2014-2022)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Mahendra_Singh_Dhoni_January_2016_%28cropped%29.jpg/242px-Mahendra_Singh_Dhoni_January_2016_%28cropped%29.jpg"><p>M.S Dhoni(2008-2015)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg/250px-Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg"><p>Virender Sehwag(2005-2012)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Rahul_Dravid_at_GQ_Men_Of_The_Year_2012_AWARD.jpg/250px-Rahul_Dravid_at_GQ_Men_Of_The_Year_2012_AWARD.jpg"><p>Rahul Dravid(2003-2007)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Sourav_Ganguly_crop.jpg/250px-Sourav_Ganguly_crop.jpg"><p>Sourav Ganguly(2000-2006)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sachin_at_Castrol_Golden_Spanner_Awards.jpg/250px-Sachin_at_Castrol_Golden_Spanner_Awards.jpg"><p>Sachin Tendulkar(1996-2000)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kapil_Dev_at_Equation_sports_auction.jpg/250px-Kapil_Dev_at_Equation_sports_auction.jpg"><p>Kapil Dev (1982-1987)</p></div>
+  </div>
+
+  <!-- ODI -->
+  <div class="cap-row" id="odi">
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shubman_Gill_2023_%28cropped%29.jpg/220px-Shubman_Gill_2023_%28cropped%29.jpg"><p>Shubam Ghill (2025)</p></div>
+ <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hardik_Pandya_in_PMO_New_Delhi.jpg/250px-Hardik_Pandya_in_PMO_New_Delhi.jpg"><p>Hardik Pandya(2023)</p></div>
+
+        <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Jasprit_Bumrah_in_PMO_New_Delhi.jpg/250px-Jasprit_Bumrah_in_PMO_New_Delhi.jpg"><p>Jasprit Bumrah (2022-2025)</p></div>
+  <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg/250px-Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg"><p>Rohith Sharma (2017-2025)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg/179px-KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg"><p>KL Rahul(2022)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/250px-Virat_Kohli_in_PMO_New_Delhi.jpg"><p>Virat Kohli(2013-2021)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gautam_Gambhir_%28IPL_2014%29.jpg/250px-Gautam_Gambhir_%28IPL_2014%29.jpg"><p>Gautam Gambhir(2010-2011)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Suresh_Raina1.jpg/250px-Suresh_Raina1.jpg"><p>Suresh Raina(2010-2014)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mahendra_Singh_Dhoni_receiving_Padma_Bhushan.jpg/250px-Mahendra_Singh_Dhoni_receiving_Padma_Bhushan.jpg"><p>M.S Dhoni(2007-2018)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg/250px-Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg"><p>Virender Sehwag(2003-2011)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Rahul_Dravid_at_GQ_Men_Of_The_Year_2012_AWARD.jpg/250px-Rahul_Dravid_at_GQ_Men_Of_The_Year_2012_AWARD.jpg"><p>Rahul Dravid(2000-2007)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sourav_Ganguly_closeup-2.jpg/167px-Sourav_Ganguly_closeup-2.jpg"><p>Sourav Ganguly(1999-2005)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sachin_at_Castrol_Golden_Spanner_Awards.jpg/250px-Sachin_at_Castrol_Golden_Spanner_Awards.jpg"><p>Sachin Tendulkar(1996-1999)</p></div>
+ 
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Kapil_Dev_at_Equation_sports_auction.jpg/250px-Kapil_Dev_at_Equation_sports_auction.jpg"><p>Kapil Dev (1982-1932)</p></div>
+
+    
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Sunny_Gavaskar_Sahara.jpg/250px-Sunny_Gavaskar_Sahara.jpg"><p>Sunil Gavaskar (1980-1985)</p></div>
+  </div>
+
+  <!-- T20 -->
+  <div class="cap-row" id="t20">
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Suryakumar_Yadav_in_PMO_New_Delhi.jpg/250px-Suryakumar_Yadav_in_PMO_New_Delhi.jpg"><p>Surya Kumar Yadav (2026)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Shubman_Gill_2023_%28cropped%29.jpg/220px-Shubman_Gill_2023_%28cropped%29.jpg"><p>Shubam Ghill (2025)</p></div>
+ <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Hardik_Pandya_in_PMO_New_Delhi.jpg/250px-Hardik_Pandya_in_PMO_New_Delhi.jpg"><p>Hardik Pandya(2023)</p></div>
+
+        <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Jasprit_Bumrah_in_PMO_New_Delhi.jpg/250px-Jasprit_Bumrah_in_PMO_New_Delhi.jpg"><p>Jasprit Bumrah (2022-2025)</p></div>
+  <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg/250px-Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg"><p>Rohith Sharma (2017-2025)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg/179px-KL_Rahul_at_Femina_Miss_India_2018_Grand_Finale_%28cropped%29.jpg"><p>KL Rahul(2022)</p></div>
+
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/250px-Virat_Kohli_in_PMO_New_Delhi.jpg"><p>Virat Kohli(2013-2021)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Gautam_Gambhir_%28IPL_2014%29.jpg/250px-Gautam_Gambhir_%28IPL_2014%29.jpg"><p>Gautam Gambhir(2010-2011)</p></div>
+<div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Suresh_Raina1.jpg/250px-Suresh_Raina1.jpg"><p>Suresh Raina(2010-2014)</p></div>
+    <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Mahendra_Singh_Dhoni_receiving_Padma_Bhushan.jpg/250px-Mahendra_Singh_Dhoni_receiving_Padma_Bhushan.jpg"><p>M.S Dhoni(2007-2018)</p></div>
+
+   <div class="cap-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg/250px-Virender_Sehwag_at_the_NDTV_Marks_for_Sports_event_13.jpg"><p>Virender Sehwag(2003-2011)</p></div>
+</div>
+
+</section>
+
+<!-- -------------------------- -->
+  <section class="gallery-section">
+
+
+  <h2>Galleries</h2>
+
+  <div class="gallery-grid">
+
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/2312/a6f3a0a0-b25e-4b38-946d-0b412f18e52f.jpg" />
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/2312/d479309e-5a1f-464e-93d7-08c114339e61.jpg" />
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/2311/4eaed2b9-3ea3-4689-9b72-745af279c4e8.jpg" />
+
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/1748/8425a25e-f64d-4b6b-a92d-faa3ffd0e4e4.jpg" />
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/1536/18f20ca1-a721-46f6-a598-9ff6626d7bbe.jpg" />
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/1536/b92323f7-c83e-4857-b148-8d1db123ad62.jpg" />
+
+  </div>
+
+</section>
+</div> 
+<!-- ------------------------------------- -->
+ <div id="womenContent" class="gender-content">
+
+   <div class="container-fluid my-4 px-0">
+
+<div id="womenCarousel" class="carousel slide" data-bs-ride="carousel" >
+
+<div class="carousel-inner rounded-4 overflow-hidden">
+
+<div class="carousel-item active">
+  <div class="hero-slide">
+
+    <iframe 
+      src="https://www.youtube.com/embed/hON4gpakWWM"
+      allowfullscreen>
+    </iframe>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h2>WOMEN RCB winning moment e sala cup namde</h2>
+      <p>17th Feb, 2026</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="carousel-item">
+  <div class="hero-slide">
+
+    <iframe 
+       src="https://www.youtube.com/embed/sE8z0XPYsRc" 
+       allowfullscreen>
+    </iframe>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h2> ENG W Vs IND W</h2>
+      <p>20th Feb, 2026</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="carousel-item">
+  <div class="hero-slide">
+
+    <iframe 
+       src="https://www.youtube.com/embed/QBH0US90qh8"
+       allowfullscreen>
+    </iframe>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h2>Rodrigues & Kaur Stand Out </h2>
+      <p>25th Feb, 2026</p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#womenCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#womenCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+</div>  
+<!-- --------------------------------------   -->
+ <div class="matches-header">
+
+  <h2>Matches</h2>
+
+  <div class="tabs">
+    <span class="tab active" onclick="showFixtures()">Fixtures</span>
+    <span class="tab" onclick="showResults()">Results</span>
+  </div>
+  
+      <a href="all.html" class="see-all"><i class="fa-solid fa-eye"></i></a>
+    
+  </div>
+
+
+
+<!-- FIXTURES -->
+<div id="women-fixtures" class="tickets-row active">
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC WOMEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC WOMEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/CqCDnjhh7Y1729662126Australia.png" class="team-logo">
+    <span>Australia</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC WOMEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC WOMEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC WOMEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    ICC WOMEN'S T20 WORLD CUP 2026
+    <span class="timer">20 HOURS TO GO</span>
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+    Wed, 18 Feb 2026 | 19:00 IST
+  </div>
+  <div class="match-bottom">
+    Narendra Modi Stadium, Ahmedabad
+    <span class="info">Match Info →</span>
+  </div>
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+</div>
+
+<!-- RESULTS -->
+<div id="women-results" class="tickets-row">
+  <!-- ----------------------------------------------------------------------------- -->
+      <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 6 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/CqCDnjhh7Y1729662126Australia.png" class="team-logo">
+    <span>Australia</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 30 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+ <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 50 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/iJWCyezx0Z1729663299Netherland.png" class="team-logo">
+    <span>HOLLAND</span>
+</div>
+  </div>
+  <div class="match-time">
+HOLLAND WON BY 45 RUNS  </div>
+ 
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+    YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 100 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- --> <!-- ----------------------------------------------------------------------------- -->
+    <div class="match-card"> <div class="match-top">
+   YESTERDAY
+  </div>
+  <div class="teams">
+    <div class="team">
+    <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png" class="team-logo">
+    <span>INDIA</span>
+</div>
+    <div class="vs">VS</div>
+    <div class="team">
+    <img src="https://scores.bcci.tv/matchcentre/teamlogos/VfKYy500Yq1762757480PakistanCA.png" class="team-logo">
+    <span>PAKISTAN</span>
+</div>
+  </div>
+  <div class="match-time">
+INDIA WON BY 100 RUNS  </div>
+
+</div>
+<!-- ----------------------------------------------------------------------------- -->
+</div>
+<!-- ---------------
+  -->
+<section class="videos-section">
+
+  <div class="videos-header">
+    <h2>Videos</h2>
+
+    <div class="video-tabs">
+  <span class="vtab active" onclick="showVideos('women-latest', this)">Latest</span>
+  <span class="vtab" onclick="showVideos('women-highlights', this)">Highlights</span>
+  <span class="vtab" onclick="showVideos('women-features', this)">Features & Interviews</span>
+  <span class="vtab" onclick="showVideos('women-press', this)">Press Conferences</span>
+</div>
+
+
+    <div class="video-controls">
+     
+    </div>
+  </div>
+
+
+    <div class="videos-row active" id="women-latest">
+<iframe width="331" height="599" src="https://www.youtube.com/embed/fQzZtqcVoTg" title="Champions India and those who walked before | CWC25" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/hAn1HY4_b9w" title="Smriti Mandhana ko mila “Star Opener” ka khitab |  #SmritiMandhana #StarOpener #WomenCricket" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/0vm8sxKcfAI" title="Smriti Mandhana named BBC Indian Sportswoman of the Year | BBC News India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/2_1Qwa4wYlk" title="Sania Mirza meets the DC girls 😍" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+
+<div class="videos-row" id="women-highlights">
+ <iframe width="337" height="599" src="https://www.youtube.com/embed/N7rBL8R4QZk" title="|| Radha Yadav Stuns Everyone with Her Brilliant Fielding || Game-Changing Fielding by Radha Yadav" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ <iframe width="337" height="599" src="https://www.youtube.com/embed/_M-BjKWbmzs" title="A flying Jemimah Rodrigues takes a blinder 🚨🤩 #CWC25" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/w1kJ0rewE90" title="Just Jemimah Rodrigues jamming on DJ&#39;s Stadium Music ❤ #ytshorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/ru8Js3Qa8wY" title="Women&#39;s Cricket Roars! India Reaches World Cup Final!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="videos-row" id="women-features">
+  <iframe width="337" height="599" src="https://www.youtube.com/embed/_BtPtcAvsis" title="Smriti Mandhana roasts Jemimah Rodrigues 😂#WPL2024 #ytshorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="337" height="599" src="https://www.youtube.com/embed/xXzAy-NT5rQ" title="Smriti Mandhana — fun and fabulous in our rapid fire round! 😍" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/ScX8D6rCFRo" title="Raise Your Hands If | Mithali Raj, Smriti Mandhana | India Women Vs New Zealand Women Live Cricket" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/0JmGQjdrMmU" title="Absolute gold from Smriti Mandhana!⚡ Throwback to #ISH2019 🏆" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div class="videos-row" id="women-press">
+<iframe width="337" height="599" src="https://www.youtube.com/embed/lUkYK_9kNCs" title="#ICCT20 women’s #Cricket World Cup , Pakistani captain Fatima Sana , Press conference in #Dubai ." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/T5VcVDLuAoA" title="The moment India completed a comprehensive win over Pakistan at #CWC25 👏" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/OMxF9w8jm_0" title="All Captains Are Ready For The @ICC WOMENS CRICKET WORLD CUP 2025 #cricketlover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="337" height="599" src="https://www.youtube.com/embed/pCDexXWwLck" title="Smriti Mandhana didn’t believe at first after winning the World Cup #bcci #smriti mandhana #cwc25" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+</section>
+<!-- ---------------------------------------- -->
+  <section class="news-section">
+
+  <div class="news-header">
+    <h2>Latest News</h2>
+    
+  </div>
+
+  <div class="news-layout">
+    <div class="featured-news">
+      <img src="https://assets.bcci.tv/bcci/articles/1771299335_VP19197.jpg">
+
+      <div class="featured-overlay">
+        <span class="badge">News</span>
+        <h3>BCCI invites applications for Coaching and Performance Staff positions at the Centre of Excellence</h3>
+        <p>09th February, 2026</p>
+      </div>
+    </div>
+    <div class="side-news">
+
+      <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1770639560_BCCI_Thumbnail.png">
+        <div>
+          <span>09th February, 2026</span>
+          <h4>BCCI announces Annual Player Retainership 2025–26 – Team India</h4>
+        </div>
+      </div>
+       <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1770395018_2260248429.jpg">
+        <div>
+          <span>09th February, 2026</span>
+          <h4>BCCI announces Annual Player Retainership 2025–26 – Team India</h4>
+        </div>
+      </div>
+       <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1770124587_GettyImages-2158599902.jpg.jpeg">
+        <div>
+          <span>09th February, 2026</span>
+          <h4>BCCI announces Annual Player Retainership 2025–26 – Team India</h4>
+        </div>
+      </div>
+       <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1768657489_SLIND_13635.jpg">
+        <div>
+          <span>09th February, 2026</span>
+          <h4>BCCI announces Annual Player Retainership 2025–26 – Team India</h4>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1769408229_8338f950-ff14-429a-8340-6f72aeb7401c-monochrome.png">
+        <div>
+          <span>06th February, 2026</span>
+          <h4>BCCI congratulates India Under-19 team on ICC World Cup triumph</h4>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <img src="https://assets.bcci.tv/bcci/articles/1768575108_Website_Thumbnail.png">
+        <div>
+          <span>06th February, 2026</span>
+          <h4>Harshit Rana ruled out, Siraj named replacement</h4>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- --------------------------- -->
+<section class="ranking-section">
+
+  <div class="ranking-left">
+    <h2>The Game in Numbers</h2>
+    <p>A look at the current cricket rankings</p>
+  </div>
+
+  <div class="ranking-cards">
+
+    <div class="team-ranking">
+      <h4>Team Ranking</h4>
+
+      <div class="rank-grid">
+        <div class="rank-box">
+          <span>TEST</span>
+          <strong>#04</strong>
+        </div>
+        <div class="rank-box">
+          <span>ODI</span>
+          <strong>#01</strong>
+        </div>
+        <div class="rank-box big">
+          <span>T20I</span>
+          <strong>#01</strong>
+        </div>
+      </div>
+    </div>
+
+     <div class="players-wrapper">
+     <div class="players-row">
+      <div class="player-card">
+      <div class="player-info">
+        <h3>Smriti Mandana</h3>
+        <p>Batter</p>
+        <span>Rank: #02</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/4101_compress.png" class="player-img">
+      <div class="bg-rank">02</div>
+    </div>
+     
+
+     <div class="player-card">
+      <div class="player-info">
+        <h3>Jemimah Rodrigues</h3>
+        <p>Batter</p>
+        <span>Rank: #04</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/5051_compress.png" class="player-img">
+      <div class="bg-rank">04</div>
+    </div>
+
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Harmanpreet Kaur</h3>
+        <p>Batter</p>
+        <span>Rank: #08</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/559_compress.png" class="player-img">
+      <div class="bg-rank">08</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Deepti Sharma</h3>
+        <p>Batter</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/3192_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Pratika Rawal</h3>
+        <p>Batter</p>
+        <span>Rank: #15</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/3664_compress.png" class="player-img">
+      <div class="bg-rank">15</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Sneh Rana</h3>
+        <p>All Rounder</p>
+        <span>Rank: #23</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/11083_compress.png" class="player-img">
+      <div class="bg-rank">23</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Shafali Verma</h3>
+        <p>Batter</p>
+        <span>Rank: #35</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/5824_compress.png" class="player-img">
+      <div class="bg-rank">35</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Richa Ghosh</h3>
+        <p>Batter</p>
+        <span>Rank: #12</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/11082_compress.png" class="player-img">
+      <div class="bg-rank">12</div>
+    </div>
+
+        <div class="player-card">
+      <div class="player-info">
+        <h3>Renuka Singh Thakur</h3>
+        <p>Bowler</p>
+        <span>Rank: #01</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/61_compress.png" class="player-img">
+      <div class="bg-rank">01</div>
+    </div>
+     
+      <div class="player-card">
+      <div class="player-info">
+        <h3>Kranti Gaud</h3>
+        <p>Bowler</p>
+        <span>Rank: #01</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/3704_compress.png" class="player-img">
+      <div class="bg-rank">01</div>
+    </div>
+
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Radha Yadav</h3>
+        <p>Bowler</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://documents.bcci.tv/resizedimageskirti/3704_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+
+    
+    <div class="player-card">
+      <div class="player-info">
+        <h3>Shreyanka Patil</h3>
+        <p>Bowler</p>
+        <span>Rank: #10</span>
+        <div class="format-tag">TEST</div>
+      </div>
+
+      <img src="https://bcciplayerimages-v2.s3.amazonaws.com/resizedimageskirti/11105_compress.png" class="player-img">
+      <div class="bg-rank">10</div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+<!-- ----------------------------------- -->
+ <section class="app-section">
+
+  <div class="app-content">
+    <h1>Get the Official BCCI App</h1>
+
+    <p>
+      Get the latest scores on the go. Find the latest content, including match
+      highlights, press conferences and recap all at your fingertips by downloading
+      the official BCCI app.
+    </p>
+
+    <div class="store-buttons">
+     <a href="https://play.google.com/store/apps/details?id=tv.bcci&hl=en-IN" target="_blank"> <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"></a>
+      <a href="https://apps.apple.com/in/app/bcci/id1374037778" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"></a>
+    </div>
+  </div>
+
+  <div class="app-phones-1">
+    <img class="phone back" src="https://documents.bcci.tv/web-images/official-mob.png">
+    <img class="phone front" src="https://documents.bcci.tv/web-images/official-mob.png">
+  </div>
+
+</section>
+
+
+   <section class="honours">
+
+  <h2>Honours</h2>
+
+  <div class="honours-row">
+
+    <div class="honour-card">
+      <span class="year">2025</span>
+      <img src="https://documents.bcci.tv/bcci/images/Trophy/ICC_Women_ODI_WC25.png">
+      <p>ICC Cricket World Cup</p>
+    </div>
+
+    
+
+
+  </div>
+
+</section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+ <section class="sponsors">
+
+  <div class="sponsor-box">
+
+    <div class="sponsor-col">
+      <small>TITLE SPONSOR</small>
+      <a href="https://www.idfcfirst.bank.in/" target="_blank"><img src="https://documents.bcci.tv/web-images/spsr-idfc-first.png"></a>
+    </div>
+
+    <div class="sponsor-col">
+      <small>LEAD SPONSOR</small>
+      <a href="https://www.apollotyres.com/en-in/" target="_blank"><img src="https://documents.bcci.tv/web-images/apollo-tyre.png"></a>
+    </div>
+
+    <div class="sponsor-col">
+      <small>KIT SPONSOR</small>
+      <a href="https://www.adidas.co.in/" target="_blank"><img src="https://documents.bcci.tv/web-images/spsr-addidas.png"></a>
+    </div>
+
+    <div class="sponsor-col">
+      <small>OFFICIAL PARTNERS</small>
+      <div class="multi">
+       <a href="https://www.sbilife.co.in/" target="_blank"><img src="https://documents.bcci.tv/web-images/SBI.png"></a> 
+        <a href="https://www.instagram.com/officialcampa/" target="_blank"><img src="https://documents.bcci.tv/web-images/campa-white-bg.png"></a>
+        <a href="https://atomberg.com/" target="_blank"><img src="https://documents.bcci.tv/web-images/atomberg.png"></a>
+        <a href="https://www.asianpaints.com/" target="_blank"><img src="https://documents.bcci.tv/web-images/asian_paints.png"></a>
+      </div>
+    </div>
+
+    <div class="sponsor-col">
+      <small>OFFICIAL BROADCASTER</small>
+      <a href="https://www.hotstar.com/in/home" target="_blank"><img src="https://documents.bcci.tv/web-images/spsr-star-sports.png"></a>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+    </main>
+    <footer>
+      <section class="mega-footer">
+
+  <div class="footer-grid">
+
+    <div class="footer-col logo-col">
+      <img src="https://documents.bcci.tv/web-images/bcci-logo-rounded.png">
+      <h4>Contact Us</h4>
+      <p>4th Floor, Cricket Centre</p>
+      <p>Wankhede Stadium ‘D’ Road,</p>
+      <p>Churchgate Mumbai – 400020, India.</p>
+      <p>Email: office@bcci.tv</p>
+      <p>T: +91 22 67598800</p>
+      <p>T: +91 22 61580300</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Matches</h4>
+      <a>Domestic</a>
+      <a>International</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Videos</h4>
+      <a>Latest</a>
+      <a>Highlights</a>
+      <a>Features & Interviews</a>
+      <a>Press Conferences</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>News</h4>
+      <a>Latest</a>
+      <a>Press Releases</a>
+      <a>Features & Interviews</a>
+      <a>BCCI News</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>More</h4>
+      <a>IPL</a>
+      <a>WPL</a>
+      <a>Venues</a>
+      <a>Galleries</a>
+      <a>Jobs</a>
+      <a>Tender</a>
+      <a>Playing Conditions</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>About</h4>
+      <a>History</a>
+      <a>Anti Corruption</a>
+      <a>Anti Racism</a>
+      <a>Anti Doping</a>
+      <a>TUE Application Form</a>
+      <a>Annual Reports</a>
+      <a>MCC Laws of Cricket</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Players</h4>
+      <a>Men</a>
+      <a>Women</a>
+    </div>
+
+  </div>
+
+</section>
+
+    </footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="bcc1.js">
+</script>
+
+</body>
+</html>

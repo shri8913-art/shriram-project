@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery-section{
+  background:#263043;
+  padding:50px 40px;
+  color:white;
+}
+
+.gallery-section h2{
+  font-size:34px;
+  margin-bottom:25px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:16px;
+  transition:.4s ease;
+  cursor:pointer;
+}
+
+.gallery-grid img:nth-child(1),
+.gallery-grid img:nth-child(2),
+.gallery-grid img:nth-child(3){
+  height:300px;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.04);
+}
+
+@media(max-width:900px){
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:500px){
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <section class="gallery-section">
+
+
+  <h2>Galleries</h2>
+
+  <div class="gallery-grid">
+
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/2312/a6f3a0a0-b25e-4b38-946d-0b412f18e52f.jpg" />
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/2312/d479309e-5a1f-464e-93d7-08c114339e61.jpg" />
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/2311/4eaed2b9-3ea3-4689-9b72-745af279c4e8.jpg" />
+
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/1748/8425a25e-f64d-4b6b-a92d-faa3ffd0e4e4.jpg" />
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/1536/18f20ca1-a721-46f6-a598-9ff6626d7bbe.jpg" />
+    <img src="https://assets.bcci.tv/watermarkoutput/bcci/photos/1536/b92323f7-c83e-4857-b148-8d1db123ad62.jpg" />
+
+  </div>
+
+</section>
+
+</body>
+</html>
