@@ -16,6 +16,10 @@ function setLang(lang){
         document.getElementById("players").innerText = "ఆటగాళ్లు";
         document.getElementById("Ranking").innerText = "ర్యాంకింగ్";
         document.getElementById("Stats").innerText = "గణాంకాలు";
+          document.getElementById("heroTitle1").innerText = "ఆర్‌సీబీ గెలిచిన క్షణం – ఈసారి కప్ మనదే";
+    document.getElementById("heroDate1").innerText = "17 ఫిబ్రవరి, 2026";
+
+    
 
 document.getElementById("LiveText").innerText = "ప్రత్యక్ష దేశీయ మ్యాచ్‌లు";
 
@@ -37,6 +41,9 @@ document.getElementById("LiveText").innerText = "ప్రత్యక్ష ద
         document.getElementById("LiveText").innerText = "Live Domestic Matches";
         document.getElementById("International").innerText = "International";
         document.getElementById("Domestic").innerText = "Domestic";
+        document.getElementById("heroTitle1").innerText = "RCB winning moment e sala cup namde";
+    document.getElementById("heroDate1").innerText = "17th Feb, 2026";
+    
     }
 }
 const menRadio = document.getElementById("men");
