@@ -1,0 +1,143 @@
+.cloud-nav {
+    background: linear-gradient(180deg, #cfd9ff 0%, #eef2ff 70%);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.cloud-nav .nav-link {
+    color: #222;
+    font-weight: 500;
+}
+
+.cloud-nav .nav-link:hover {
+    color: #4b63ff;
+}
+
+.cloud-nav .navbar-brand {
+    color: #111;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: linear-gradient(180deg,#cfd9ff 0%, #ffffff 70%);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1600px;
+    height: 1600px;
+    background: url(eagle2.png) no-repeat center;
+    background-size: contain;
+    opacity: 0.3;   
+    z-index: 0;
+}
+
+.hero-box {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-box h1 {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.hero-box p {
+    font-size: 20px;
+    color: #555;
+}
+
+.hero-btn {
+    margin-top: 35px;
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 18px 42px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+.cloud-footer{
+    background: linear-gradient(180deg,#eef2ff 0%, #ffffff 100%);
+    padding: 60px 0 20px;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+}
+
+.cloud-footer h5,
+.cloud-footer h6{
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.cloud-footer p{
+    color:#555;
+    max-width:280px;
+}
+
+.cloud-footer ul{
+    list-style:none;
+    padding:0;
+}
+
+.cloud-footer ul li{
+    margin-bottom:8px;
+}
+
+.cloud-footer ul a{
+    text-decoration:none;
+    color:#444;
+    transition:.2s;
+}
+
+.cloud-footer ul a:hover{
+    color:#4b63ff;
+}
+
+.socials a{
+    font-size:20px;
+    margin-right:15px;
+    color:#222;
+    transition:.3s;
+}
+
+.socials a:hover{
+    color:#4b63ff;
+    transform:translateY(-3px);
+}
+
+.footer-bottom{
+    margin-top:40px;
+    text-align:center;
+    font-size:14px;
+    color:#777;
+}
+@media(max-width:768px){
+    .hero-box h1{
+        font-size:42px;
+    }
+}

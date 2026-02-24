@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calling()">
+        submit
+    </button>
+    <br>
+    <input type="text" placeholder="enter your username" id="username">
+    <input type="text" placeholder="enter your password" id="email">
+    <br>
+    <button onclick="uma()">
+        submit
+    </button>
+    <button onclick="generatePassword()" id="output">Generate Password</button>
+
+ 
+
+
+
+
+
+    <script>
+        function calling(){
+            console.log("helooooooooooooooo")
+        }
+        function uma(){
+           let input = document.getElementById("username").value
+           console.log(input)
+
+           let email = document.getElementById("email").value
+           console.log(email)
+        }
+        function generatePassword(){
+
+            let passwordList = "qwertyuiopasdfghjklzxcvbnm123456789!@#$%^&*()";
+            let password = [];
+            let passwordList_length = passwordList.length;
+
+            for(let i = 1; i <= 8; i++){
+                let randomIndex = Math.floor(Math.random() * passwordList_length);
+                let randomCharacter = passwordList.charAt(randomIndex);
+                password.push(randomCharacter);
+            }
+
+            let randomPass = password.join("");
+            document.getElementById("output").innerText = randomPass; 
+            console.log(randomPass); 
+            
+}
+
+    </script>
+</body>
+</html>
