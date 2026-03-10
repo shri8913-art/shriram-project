@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter student name" id="student">
+    <button onclick="Addstudent()">Add Student</button>
+    <ul id="studentList"></ul>
+
+
+    <script>
+        function Addstudent(){
+
+            let student_field=document.getElementById("student")
+             
+            if(student_field.value==""){
+                alert("please,enter student name");
+                return false
+            }
+
+
+            let existingStudents=getStudentFromStorage();
+            // console.log(existingStudents);
+
+
+            existingStudents.push(student_field.value);
+            // console.log(existingStudents)
+
+
+            localStorage.setItem("umaa",JSON.stringify(existingStudents));
+            
+            student_field.value=""
+
+            loadStudents()
+
+        }
+        function getStudentFromStorage(){
+             let students = localStorage.getItem("umaa");
+             return students?JSON.parse(students):[]
+
+
+        }
+        function loadStudents(){
+            let studentlist=document.getElementById("studentList")
+            studentlist.innerHTML=""
+
+            let existingStudents=getStudentFromStorage();
+                // console.log(existingStudents);
+                existingStudents.forEach(function(i, index){
+                    // console.log(i, index);
+                    let li=document.createElement("li")
+                    studentlist.appendChild(li);
+                    li.innerHTML=`${i} <button onclick="deleteStudents(${index})">Delete</button>`
+                
+            })
+
+            // existingStudents.forEach(function(i,index){
+            //     console.log(i,index)
+            //     // let li = document.createElement("li");
+            //     // li.innerHTML=`${i}<button>Delete</button>`
+            //     // studentlist.appendChild(li)
+                
+            // })
+
+
+            
+
+
+        }
+        console.log("immu")
+        function deleteStudents(index){
+            let existingStudents = getStudentFromStorage();
+            console.log(existingStudents)
+            existingStudents.splice(index,1)
+             localStorage.setItem("umaa",JSON.stringify(existingStudents));
+             loadStudents()
+
+        }
+
+
+        
+    </script>
+</body>
+</html>

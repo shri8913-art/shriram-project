@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" placeholder="enter your password" id="password">
+    <input type="button" value="show" id="button" onclick="password()">
+
+    <script>
+
+        function password(){
+
+           let a= document.getElementById("password")
+           let b=  document.getElementById("button")
+             
+             if(a.type=="password"){
+              a.setAttribute("type", "text");
+              b.setAttribute("value", "hide");
+             }
+             else{
+                 a.setAttribute("type", "password");
+              b.setAttribute("value", "show");
+
+             }
+             
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>

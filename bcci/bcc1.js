@@ -46,6 +46,7 @@ document.getElementById("LiveText").innerText = "ప్రత్యక్ష ద
     
     }
 }
+
 const menRadio = document.getElementById("men");
 const womenRadio = document.getElementById("women");
 

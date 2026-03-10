@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="alertt()">submit</button>
+
+    <script>
+
+        function alertt(){
+
+            alert("hello arun")
+
+        }
+        
+    </script>    
+        -->
+
+        <input type="email" placeholder="enter your email" id="email">
+        <button onclick="arun()"> submit </button>
+
+        <div id="arun">
+
+        </div>
+
+        <button onclick="uma()">
+            Login
+        </button>
+
+        <div id="umaa">
+
+        </div>
+
+        <script>
+
+            function arun(){
+
+
+           let user =  document.getElementById("email").value ;
+           console.log(user);
+
+           document.getElementById("arun").innerText=`hello ${user} how are you`
+
+           }
+
+           function uma(){
+
+            let user = document.getElementById("email").value;
+            document.getElementById("umaa").innerHTML=`<h1 style="color:pink">hello ${user} how r u</h1> `
+
+
+           }
+
+
+
+
+
+
+
+
+        </script>
+
+
+</body>
+</html>
