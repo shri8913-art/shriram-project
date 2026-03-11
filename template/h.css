@@ -1,26 +1,26 @@
-.cloud-nav {
-    background: linear-gradient(180deg, #cfd9ff 0%, #eef2ff 70%);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+.cloud-nav{
+    background:linear-gradient(90deg,#020617,#0f172a);
+    backdrop-filter:blur(10px);
 }
 
-.cloud-nav .nav-link {
-    color: #222;
-    font-weight: 500;
+.cloud-nav .nav-link{
+    color:#e5e7eb;
 }
 
-.cloud-nav .nav-link:hover {
-    color: #4b63ff;
+.cloud-nav .nav-link:hover{
+    color:#f59e0b;
 }
 
-.cloud-nav .navbar-brand {
-    color: #111;
+.cloud-nav .navbar-brand{
+    color:#f59e0b;
+    font-weight:700;
 }
 
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, sans-serif;
-    background: linear-gradient(180deg,#cfd9ff 0%, #ffffff 70%);
+body{
+    margin:0;
+    font-family:system-ui, -apple-system, sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
 }
 
 .hero {
@@ -34,18 +34,13 @@ body {
     overflow: hidden;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1600px;
-    height: 1600px;
-    background: url(eagle2.png) no-repeat center;
-    background-size: contain;
-    opacity: 0.3;   
-    z-index: 0;
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url("eagle2.png") no-repeat center;
+    background-size:520px;
+    opacity:0.15;
 }
 
 .hero-box {
@@ -54,40 +49,37 @@ body {
 }
 
 .hero-box h1 {
+    color:#f59e0b;
     font-size: 64px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 15px;
+     
 }
 
 .hero-box p {
+    color:#e2e8f0;
     font-size: 20px;
-    color: #555;
+    
 }
 
-.hero-btn {
-    margin-top: 35px;
-    display: inline-block;
-    background: black;
-    color: white;
-    padding: 18px 42px;
-    border-radius: 40px;
-    text-decoration: none;
-    font-size: 18px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    transition: .3s;
+.hero-btn{
+background:linear-gradient(45deg,#f59e0b,#ffb020);
+color:#111;
+font-weight:600;
+padding:18px 42px;
+border-radius:40px;
+box-shadow:0 10px 40px rgba(255,170,0,0.3);
+ transition:0.3s;
 }
 
-.hero-btn:hover {
-    transform: translateY(-3px);
+.hero-btn:hover{
+transform:translateY(-3px);
 }
-
 
 .cloud-footer{
-    background: linear-gradient(180deg,#eef2ff 0%, #ffffff 100%);
-    padding: 60px 0 20px;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+    background:#020617;
+    color:#e5e7eb;
 }
-
 .cloud-footer h5,
 .cloud-footer h6{
     font-weight:600;

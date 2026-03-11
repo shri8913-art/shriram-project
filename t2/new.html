@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eyrie Q — Learn. Build. Fly.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; height: 100%; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0d0d18;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* ── HERO BACKGROUND ── */
+  .hero-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .hero-bg::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, #1a1530 0%, #0d0d18 55%, #080810 100%);
+  }
+
+  /* Warm amber glow (embers effect) */
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 50% 75%, rgba(180, 90, 20, 0.35) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 30% at 50% 65%, rgba(220, 120, 30, 0.2) 0%, transparent 55%);
+  }
+
+  /* Feather panels left & right */
+  .feather-left, .feather-right {
+    position: absolute;
+    bottom: 0;
+    width: 42%;
+    height: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .feather-left {
+    left: -4%;
+    background-position: bottom left;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 800'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='1' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c8803a' stop-opacity='0.7'/%3E%3Cstop offset='1' stop-color='%23402008' stop-opacity='0.15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M480,800 C400,600 250,400 50,50 C100,150 130,280 120,420 C90,330 70,220 60,110 C160,280 190,430 175,580 C148,490 135,380 130,270 C220,420 255,560 245,700 C225,610 215,500 210,390 C295,530 325,660 310,790 Z' fill='url(%23g1)'/%3E%3Cpath d='M440,800 C370,610 230,420 60,100 C105,195 130,315 118,455 C88,360 68,245 58,135 C150,300 178,450 162,600 C135,505 120,392 114,280 C205,432 238,572 226,712 Z' fill='url(%23g1)' opacity='0.55'/%3E%3Cpath d='M390,800 C330,620 210,440 70,160 C108,248 128,360 115,490 C88,398 70,280 62,170 C148,325 173,468 158,618 Z' fill='url(%23g1)' opacity='0.38'/%3E%3Cpath d='M340,800 C290,630 190,455 80,200 C112,285 128,396 114,520 C90,428 74,316 66,206 C148,352 169,492 152,638 Z' fill='url(%23g1)' opacity='0.25'/%3E%3C/svg%3E");
+  }
+
+  .feather-right {
+    right: -4%;
+    background-position: bottom right;
+    transform: scaleX(-1);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 800'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='1' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c8803a' stop-opacity='0.7'/%3E%3Cstop offset='1' stop-color='%23402008' stop-opacity='0.15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M480,800 C400,600 250,400 50,50 C100,150 130,280 120,420 C90,330 70,220 60,110 C160,280 190,430 175,580 C148,490 135,380 130,270 C220,420 255,560 245,700 C225,610 215,500 210,390 C295,530 325,660 310,790 Z' fill='url(%23g2)'/%3E%3Cpath d='M440,800 C370,610 230,420 60,100 C105,195 130,315 118,455 C88,360 68,245 58,135 C150,300 178,450 162,600 C135,505 120,392 114,280 C205,432 238,572 226,712 Z' fill='url(%23g2)' opacity='0.55'/%3E%3Cpath d='M390,800 C330,620 210,440 70,160 C108,248 128,360 115,490 C88,398 70,280 62,170 C148,325 173,468 158,618 Z' fill='url(%23g2)' opacity='0.38'/%3E%3Cpath d='M340,800 C290,630 190,455 80,200 C112,285 128,396 114,520 C90,428 74,316 66,206 C148,352 169,492 152,638 Z' fill='url(%23g2)' opacity='0.25'/%3E%3C/svg%3E");
+  }
+
+  /* Particles container */
+  .particles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: twinkle var(--dur, 3s) ease-in-out infinite var(--delay, 0s);
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.4); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    display: flex; align-items: center;
+    padding: 0 28px;
+    height: 54px;
+    background: rgba(8, 8, 18, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav-brand {
+    display: flex; align-items: center; gap: 9px;
+    text-decoration: none; margin-right: 36px;
+    flex-shrink: 0;
+  }
+
+  .nav-eagle-icon {
+    width: 34px; height: 34px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255,160,30,0.6));
+  }
+  .nav-eagle-fallback {
+    width: 34px; height: 34px;
+    background: linear-gradient(135deg, #c8860a, #e8a020);
+    border-radius: 8px;
+    display: none; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  /* Small shield/icon next to brand */
+  .nav-shield {
+    width: 20px; height: 20px;
+    background: linear-gradient(135deg, #d4920a, #f0c030);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    flex-shrink: 0;
+  }
+
+  .nav-brand-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem; font-weight: 700;
+    color: #f0c040;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 18px rgba(240,192,64,0.4);
+  }
+
+  .nav-links {
+    display: flex; gap: 2px; list-style: none; flex: 1;
+  }
+  .nav-links a {
+    font-size: 0.875rem; font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .nav-links a:hover { color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.05); }
+  .nav-links a.active { color: #f0c040; font-weight: 600; }
+  .nav-links .link-icon { font-size: 0.7rem; opacity: 0.6; }
+
+  .nav-right { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+
+  .nav-search {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 100px;
+    padding: 7px 16px;
+    width: 190px;
+    transition: border-color 0.2s;
+  }
+  .nav-search:focus-within { border-color: rgba(240,192,64,0.5); }
+  .nav-search input {
+    border: none; outline: none;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem; color: rgba(255,255,255,0.65); width: 100%;
+  }
+  .nav-search input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .btn-login-nav {
+    background: linear-gradient(135deg, #d4920a 0%, #f0c030 50%, #c07808 100%);
+    color: #1a0800;
+    border: none; border-radius: 100px;
+    padding: 8px 26px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem; font-weight: 700;
+    cursor: pointer; text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 3px 16px rgba(220,160,20,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: transform 0.15s, box-shadow 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .btn-login-nav:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 28px rgba(220,160,20,0.55);
+    color: #1a0800;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; z-index: 10;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding-top: 54px;
+    text-align: center;
+    gap: 0;
+  }
+
+  /* Eagle */
+  .eagle-wrap {
+    position: relative;
+    margin-bottom: -250px;
+    animation: eagleFloat 2s ease-in-out infinite;
+  }
+  @keyframes eagleFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-50px); }
+  }
+
+  .eagle-glow-ring {
+    position: absolute;
+    bottom: -10px; left: 50%;
+    transform: translateX(-50%);
+    width: 340px; height: 90px;
+    background: radial-gradient(ellipse, rgba(210,130,20,0.55) 0%, transparent 70%);
+    filter: blur(18px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .eagle-img {
+    width: 720px; height: 720px;
+    object-fit: contain;
+    position: relative; z-index: 2; display: block;
+    filter:
+      drop-shadow(0 0 20px rgba(255,150,30,0.55))
+      drop-shadow(0 0 60px rgba(200,100,10,0.3))
+      drop-shadow(0 30px 50px rgba(0,0,0,0.5));
+  }
+
+  .eagle-fallback {
+    font-size: 13rem; line-height: 1;
+    position: relative; z-index: 2;
+    filter: drop-shadow(0 0 40px rgba(255,140,20,0.7));
+    display: none;
+  }
+
+  /* Title */
+  .main-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3.8rem, 7.5vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    margin-bottom: 14px;
+    background: linear-gradient(180deg,
+      #ffe080 0%,
+      #f5c020 25%,
+      #d48a08 60%,
+      #a06005 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 18px rgba(240,180,30,0.3));
+    animation: fadeUp 0.7s 0.15s ease both;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.68);
+    letter-spacing: 0.18em;
+    margin-bottom: 44px;
+    animation: fadeUp 0.7s 0.3s ease both;
+  }
+  .tagline .sep { color: rgba(255,255,255,0.3); margin: 0 1px; }
+
+  /* CTA */
+  .btn-start {
+    display: inline-block;
+    background: linear-gradient(180deg, #f5c830 0%, #d48a08 55%, #b87005 100%);
+    color: #1c0900;
+    border: none;
+    border-radius: 100px;
+    padding: 15px 58px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    cursor: pointer; text-decoration: none;
+    letter-spacing: 0.05em;
+    position: relative; overflow: hidden;
+
+    box-shadow:
+      0 4px 0 #7a4800,
+      0 8px 36px rgba(200,140,10,0.5),
+      inset 0 1px 0 rgba(255,255,255,0.28);
+
+    transition: transform 0.15s, box-shadow 0.2s;
+    animation: fadeUp 0.7s 0.45s ease both;
+  }
+  /* Sheen overlay */
+  .btn-start::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.22) 0%, transparent 55%);
+    border-radius: 100px;
+    pointer-events: none;
+  }
+  .btn-start:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 6px 0 #7a4800,
+      0 18px 50px rgba(200,140,10,0.6),
+      inset 0 1px 0 rgba(255,255,255,0.3);
+    color: #1c0900;
+  }
+  .btn-start:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 0 #7a4800, 0 4px 16px rgba(200,140,10,0.4);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    nav { padding: 0 16px; }
+    .nav-search { display: none; }
+    .nav-links li:nth-child(n+3) { display: none; }
+    .eagle-img { width: 200px; height: 200px; }
+    .main-title { font-size: 3.2rem; }
+    .btn-start { padding: 14px 44px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BACKGROUND -->
+<div class="hero-bg">
+  <div class="feather-left"></div>
+  <div class="feather-right"></div>
+  <div class="particles" id="particles"></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <img src="eagle2.png" class="nav-eagle-icon" alt="Eyrie Q"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="nav-eagle-fallback"><img src="eagle2.png" alt=""></div>
+    <div class="nav-shield"></div>
+    <span class="nav-brand-name">Eyrie Q</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#" class="active">Dashboard <span class="link-icon">⊞</span></a></li>
+    <li><a href="#">Courses <span class="link-icon">◎</span></a></li>
+    <li><a href="#">Assignments <span class="link-icon">☰</span></a></li>
+    <li><a href="#">Progress <span class="link-icon">↗</span></a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="nav-search">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" placeholder="Search courses">
+    </div>
+    <a href="login.html" class="btn-login-nav">Login</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eagle-wrap">
+    <div class="eagle-glow-ring"></div>
+    <img src="eagle2.png" class="eagle-img" alt="Eyrie Q Eagle"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <div class="eagle-fallback">🦅</div>
+  </div>
+
+  <h1 class="main-title">Eyrie Q</h1>
+
+  <p class="tagline">
+    Learn<span class="sep">.</span> Build<span class="sep">.</span> Fly<span class="sep">.</span>
+  </p>
+
+  <a href="#" class="btn-start">Start Learning</a>
+</div>
+
+<script>
+  // Generate twinkling particles matching the dark starfield
+  const container = document.getElementById('particles');
+
+  for (let i = 0; i < 65; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+
+    const size = Math.random() * 2.5 + 0.8;
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    const dur = (Math.random() * 4 + 1.5).toFixed(1);
+    const delay = (Math.random() * 5).toFixed(1);
+
+    // Gold/amber near bottom, cool white/blue near top
+    const isBottomHalf = y > 50;
+    const r = isBottomHalf ? Math.floor(Math.random() * 60 + 210) : Math.floor(Math.random() * 80 + 160);
+    const g = isBottomHalf ? Math.floor(Math.random() * 50 + 120) : Math.floor(Math.random() * 80 + 160);
+    const b = isBottomHalf ? Math.floor(Math.random() * 20 + 10) : Math.floor(Math.random() * 60 + 180);
+
+    p.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${x}%; top:${y}%;
+      --dur:${dur}s; --delay:${delay}s;
+      background: rgba(${r},${g},${b},0.85);
+      box-shadow: 0 0 ${size * 2.5}px rgba(${r},${g},${b},0.7);
+    `;
+    container.appendChild(p);
+  }
+</script>
+</body>
+</html>
